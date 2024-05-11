@@ -1,13 +1,13 @@
 package Graph;
 
-import java.util.Queue;
-import java.util.LinkedList;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
-class Node{
+class Node {
     int curr, parent;
-    
-    public Node(int curr, int parent){
+
+    public Node(int curr, int parent) {
         this.curr = curr;
         this.parent = parent;
     }
@@ -18,33 +18,32 @@ class Solution {
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
         // Code here
         boolean[] vis = new boolean[V];
-        
-        for(int i = 0; i < V; i++){
-            if(vis[i] == false){
-                if(detectCycle(i, vis, adj)){
+
+        for (int i = 0; i < V; i++) {
+            if (vis[i] == false) {
+                if (detectCycle(i, vis, adj)) {
                     return true;
                 }
             }
         }
         return false;
     }
-    
-    private boolean detectCycle(int node, boolean[] vis, ArrayList<ArrayList<Integer>> adj){
+
+    private boolean detectCycle(int node, boolean[] vis, ArrayList<ArrayList<Integer>> adj) {
         Queue<Node> q = new LinkedList<>();
         q.add(new Node(node, -1));
         vis[node] = true;
-        
-        while(!q.isEmpty()){
+
+        while (!q.isEmpty()) {
             int curr = q.peek().curr;
             int parent = q.peek().parent;
             q.remove();
-            
-            for(Integer it: adj.get(curr)){
-                if(vis[it] == false){
+
+            for (Integer it : adj.get(curr)) {
+                if (vis[it] == false) {
                     vis[it] = true;
                     q.add(new Node(it, curr));
-                }
-                else if (parent != it){
+                } else if (parent != it) {
                     return true;
                 }
             }

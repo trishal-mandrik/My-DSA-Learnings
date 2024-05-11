@@ -30,16 +30,16 @@ public class TopViewOfBT {
                 mpp.put(line, node.data);
             }
 
-            if(node.left != null) {
+            if (node.left != null) {
                 q.add(new Pair(node.left, line - 1));
             }
 
-            if(node.right != null) {
+            if (node.right != null) {
                 q.add(new Pair(node.right, line + 1));
             }
         }
 
-        for(Map.Entry<Integer, Integer> entry : mpp.entrySet()){
+        for (Map.Entry<Integer, Integer> entry : mpp.entrySet()) {
             ans.add(entry.getValue());
         }
         return ans;

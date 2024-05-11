@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 class TempPair {
     TreeNode node;
@@ -7,25 +8,6 @@ class TempPair {
     TempPair(TreeNode _node, int _num) {
         num = _num;
         node = _node;
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
     }
 }
 

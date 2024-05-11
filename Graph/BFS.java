@@ -14,12 +14,12 @@ class BFS {
         q.add(0);
         vis[0] = true;
 
-        while(!q.isEmpty()){
+        while (!q.isEmpty()) {
             Integer node = q.poll();
             bfs.add(node);
 
-            for(Integer it: adj.get(node)){
-                if(vis[it] == false){
+            for (Integer it : adj.get(node)) {
+                if (vis[it] == false) {
                     vis[it] = true;
                     q.add(it);
                 }

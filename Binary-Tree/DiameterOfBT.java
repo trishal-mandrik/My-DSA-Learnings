@@ -1,5 +1,3 @@
-
-
 public class DiameterOfBT {
     public int findDiameter(TreeNode root) {
         int[] diameter = new int[1];
@@ -8,7 +6,7 @@ public class DiameterOfBT {
     }
 
     private int height(TreeNode root, int[] diameter) {
-        if(root == null) return 0;
+        if (root == null) return 0;
 
         int lh = height(root.left, diameter);
         int rh = height(root.right, diameter);

@@ -15,7 +15,7 @@ public class BottomViewOfBT {
 
             map.put(line, n.data);
 
-            if (n.left != null) q.add(new Pair(n.left, line -1));
+            if (n.left != null) q.add(new Pair(n.left, line - 1));
             if (n.right != null) q.add(new Pair(n.right, line + 1));
         }
 

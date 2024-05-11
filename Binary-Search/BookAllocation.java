@@ -1,15 +1,16 @@
 import java.util.ArrayList;
+
 public class Solution {
-    static boolean isPossibleSolution(ArrayList<Integer> arr, int n, int m, int mid){
+    static boolean isPossibleSolution(ArrayList<Integer> arr, int n, int m, int mid) {
         int studentCount = 1;
         int pageSum = 0;
 
-        for(int i = 0; i < n; i++){
-            if(pageSum + arr.get(i) <= mid){
+        for (int i = 0; i < n; i++) {
+            if (pageSum + arr.get(i) <= mid) {
                 pageSum += arr.get(i);
             } else {
                 studentCount++;
-                if(studentCount > m || arr.get(i) > mid){
+                if (studentCount > m || arr.get(i) > mid) {
                     return false;
                 }
                 pageSum = arr.get(i);
@@ -17,21 +18,22 @@ public class Solution {
         }
         return true;
     }
+
     public static int findPages(ArrayList<Integer> arr, int n, int m) {
         // Write your code here.
         int s = 0;
         int ans = -1;
         int sum = 0;
 
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             sum += arr.get(i);
         }
 
         int e = sum;
         int mid;
-        while(s <= e){
-            mid = s + (e - s)/2;
-            if(isPossibleSolution(arr, n, m, mid)){
+        while (s <= e) {
+            mid = s + (e - s) / 2;
+            if (isPossibleSolution(arr, n, m, mid)) {
                 ans = mid;
                 e = mid - 1;
             } else {

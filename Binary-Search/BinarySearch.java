@@ -3,7 +3,7 @@
 public class BinarySearch {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
-        int[] arr = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int[] arr = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         int start = 0;
         int end = arr.length - 1;

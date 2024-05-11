@@ -7,7 +7,7 @@ public class MaxPathSumOfBT {
     }
 
     private int maxPathDown(TreeNode node, int[] maxValue) {
-        if(node == null) return 0;
+        if (node == null) return 0;
         int left = maxPathDown(node.left, maxValue);
         int right = maxPathDown(node.right, maxValue);
 

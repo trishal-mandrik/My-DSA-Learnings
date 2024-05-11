@@ -9,20 +9,20 @@ class DFS {
         ArrayList<Integer> storeDfs = new ArrayList<>();
         boolean[] vis = new boolean[V];
 
-        for(int i = 0; i < V; i++){
-            if(vis[i] == false){
-                dfs(i, vis, adj, storeDfs); 
+        for (int i = 0; i < V; i++) {
+            if (vis[i] == false) {
+                dfs(i, vis, adj, storeDfs);
             }
         }
         return storeDfs;
     }
-    
-    private void dfs(int node, boolean[] vis, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> storeDfs){
+
+    private void dfs(int node, boolean[] vis, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> storeDfs) {
         storeDfs.add(node);
         vis[node] = true;
 
-        for(Integer it: adj.get(node)){
-            if(vis[it] == false){
+        for (Integer it : adj.get(node)) {
+            if (vis[it] == false) {
                 dfs(it, vis, adj, storeDfs);
             }
         }
