@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class rootToNodePath {
+public class RootToNodePath {
     private boolean getPath(TreeNode root, ArrayList<Integer> arr, int x) {
         if (root == null) return false;
 

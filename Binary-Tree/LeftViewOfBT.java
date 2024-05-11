@@ -1,9 +1,7 @@
-package Binary_Tree;
-
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+class LeftViewOfBT {
     void reversePreorder(TreeNode root, int level, List<Integer> ans) {
         if (root == null) return;
 
