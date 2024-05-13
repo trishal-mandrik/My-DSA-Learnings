@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Solution {
+public class AggressiveCows {
     static boolean canWePlace(int[] stalls, int dist, int cows) {
         int cntCows = 1, last = stalls[0];
 
