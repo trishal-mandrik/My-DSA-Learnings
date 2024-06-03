@@ -1,6 +1,7 @@
-package Array;
+package Array.TwoSum;
 import java.util.*;
 
+// **********************
 
 public class TwoSumBetter {
     public static String read(int n, int []arr, int target){
