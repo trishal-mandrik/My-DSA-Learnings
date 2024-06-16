@@ -1,4 +1,3 @@
-
 public class ChildrenSumPropertyInBT {
     public static void childSumProperty(Node root) {
         if (root == null) return;
@@ -10,11 +9,11 @@ public class ChildrenSumPropertyInBT {
             child += root.right.data;
         }
 
-        if(child > root.data){
+        if (child > root.data) {
             root.data = child;
         } else {
-            if(root.left != null) root.left.data = root.data;
-            if(root.right != null) root.right.data = root.data;
+            if (root.left != null) root.left.data = root.data;
+            if (root.right != null) root.right.data = root.data;
         }
 
         childSumProperty(root.left);
@@ -23,7 +22,7 @@ public class ChildrenSumPropertyInBT {
         int total = 0;
         if (root.left != null) total += root.left.data;
         if (root.right != null) total += root.right.data;
-        if(root.left != null || root.right != null) root.data = total;
+        if (root.left != null || root.right != null) root.data = total;
     }
 }
 

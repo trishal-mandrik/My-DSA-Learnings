@@ -12,7 +12,7 @@ public class ThreeSumOptimal {
 
         for (int i = 0; i < n; i++) {
             // remove duplicates
-            if (i != 0 && nums[i] == nums[i - 1])  {
+            if (i != 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
 
@@ -31,8 +31,8 @@ public class ThreeSumOptimal {
                     ans.add(temp);
                     j++;
                     k--;
-                    while(j < k && nums[j] == nums[j - 1]) j++;
-                    while(j < k && nums[k] == nums[k + 1]) k--;
+                    while (j < k && nums[j] == nums[j - 1]) j++;
+                    while (j < k && nums[k] == nums[k + 1]) k--;
                 }
             }
         }

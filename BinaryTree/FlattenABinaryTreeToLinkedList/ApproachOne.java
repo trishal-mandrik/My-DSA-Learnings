@@ -4,6 +4,7 @@ import BST.TreeNode;
 
 public class ApproachOne {
     TreeNode prev = null;
+
     public void flatten(TreeNode node) {
         if (node == null) return;
 

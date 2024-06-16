@@ -4,13 +4,13 @@ public class FloorOfBT {
     public static int floorInBST(TreeNode node, int x) {
         int floor = -1;
 
-        while(node != null) {
-            if(node.val == x) {
+        while (node != null) {
+            if (node.val == x) {
                 floor = node.val;
                 return floor;
             }
 
-            if(x > node.val) {
+            if (x > node.val) {
                 floor = node.val;
                 node = node.right;
             } else {

@@ -1,18 +1,14 @@
 package Array.ThreeSum;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ThreeSumBetter {
     public static List<List<Integer>> triplet(int n, int[] arr, int target) {
         Set<List<Integer>> st = new HashSet<>();
 
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             Set<Integer> hashSet = new HashSet<>();
-            for(int j = i + 1; j < n; j++) {
+            for (int j = i + 1; j < n; j++) {
                 // Calculate the 3rd element
                 int third = target - (arr[i] + arr[j]);
 

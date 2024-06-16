@@ -1,9 +1,9 @@
 package BST;
 
 public class TreeNode {
-    int val;
     public TreeNode left;
     public TreeNode right;
+    int val;
 
     TreeNode() {
     }

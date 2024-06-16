@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class SubsetSum1 {
-    void helper(int ind, int sum, int n, ArrayList<Integer> arr, ArrayList<Integer> sumSubset){
-        if(ind == n) {
+    void helper(int ind, int sum, int n, ArrayList<Integer> arr, ArrayList<Integer> sumSubset) {
+        if (ind == n) {
             sumSubset.add(sum);
             return;
         }
@@ -16,6 +16,7 @@ public class SubsetSum1 {
         // dont pick the element
         helper(ind + 1, sum, n, arr, sumSubset);
     }
+
     ArrayList<Integer> subsetSums(ArrayList<Integer> arr, int n) {
         // n is size of arr
         ArrayList<Integer> sumSubset = new ArrayList<>();

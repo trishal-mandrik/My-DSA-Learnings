@@ -3,7 +3,7 @@ import java.util.Queue;
 
 public class SerializeAndDeserialize {
     String serialize(TreeNode root) {
-        if(root == null) return "";
+        if (root == null) return "";
         Queue<TreeNode> q = new LinkedList<>();
         StringBuilder res = new StringBuilder();
         q.add(root);
