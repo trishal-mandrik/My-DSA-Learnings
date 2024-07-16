@@ -8,11 +8,11 @@ public class IntersectionPointUsingDifference {
         ListNode temp1 = head1;
         ListNode temp2 = head2;
         while (temp1 != null || head2 != null) {
-            if(temp1 != null) {
+            if (temp1 != null) {
                 len1++;
                 temp1 = temp1.next;
             }
-            if(temp2 != null) {
+            if (temp2 != null) {
                 len2++;
                 temp2 = temp2.next;
             }
@@ -22,14 +22,14 @@ public class IntersectionPointUsingDifference {
     }
 
     //utility function to check presence of intersection
-    static ListNode intersectionPresent(ListNode head1,ListNode head2) {
+    static ListNode intersectionPresent(ListNode head1, ListNode head2) {
         int diff = getDifference(head1, head2);
         if (diff < 0)
             while (diff++ != 0) head2 = head2.next;
         else
             while (diff-- != 0) head1 = head1.next;
-        while(head1 != null) {
-            if(head1 == head2) return head1;
+        while (head1 != null) {
+            if (head1 == head2) return head1;
             head2 = head2.next;
             head1 = head1.next;
         }
