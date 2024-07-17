@@ -10,7 +10,7 @@ public class BoundaryTraversalOfBT {
     private void addLeftBoundary(TreeNode root, List<Integer> res) {
         TreeNode curr = root.left;
         while (curr != null) {
-            if (isLeaf(curr) == false) res.add(curr.val);
+            if (!isLeaf(curr)) res.add(curr.val);  //add if not leaf
             if (curr.left != null) curr = curr.left;
             else curr = curr.right;
         }
@@ -29,7 +29,7 @@ public class BoundaryTraversalOfBT {
         TreeNode curr = root.right;
         Stack<Integer> stack = new Stack<Integer>();
         while (curr != null) {
-            if (isLeaf(curr) == false) stack.push(curr.val);
+            if (!isLeaf(curr)) stack.push(curr.val); //add if not leaf
             if (curr.right != null) curr = curr.right;
             else curr = curr.left;
         }
@@ -41,7 +41,7 @@ public class BoundaryTraversalOfBT {
 
     List<Integer> printBoundary(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        if (isLeaf(root) == false) ans.add(root.val);
+        if (!isLeaf(root)) ans.add(root.val); //add if not leaf
         addLeftBoundary(root, ans);
         addLeaves(root, ans);
         addRightBoundary(root, ans);
