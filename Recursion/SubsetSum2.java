@@ -11,7 +11,7 @@ public class SubsetSum2 {
             if (i != ind && nums[i] == nums[i - 1]) continue;
             ds.add(nums[i]);
             findSubsets(i + 1, nums, ds, ansList);
-            ds.remove(ds.size() - 1);
+            ds.removeLast();
         }
 
     }
