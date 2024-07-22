@@ -3,7 +3,7 @@ package Recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintAllPermutationsBrute {
+public class AllPermutationsApproachOne {
     private void recurPermute(int[] nums, List<Integer> ds, List<List<Integer>> ans, boolean[] freq) {
         if (ds.size() == nums.length) {
             ans.add(new ArrayList<>());
@@ -15,7 +15,7 @@ public class PrintAllPermutationsBrute {
                 freq[i] = true;
                 ds.add(nums[i]);
                 recurPermute(nums, ds, ans, freq);
-                ds.remove(ds.size() - 1);
+                ds.removeLast();
                 freq[i] = false;
             }
         }

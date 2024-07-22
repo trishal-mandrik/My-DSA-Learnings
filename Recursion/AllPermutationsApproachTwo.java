@@ -3,7 +3,7 @@ package Recursion;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class AllPermutations {
+public class AllPermutationsApproachTwo {
     void swap(char s[], int i, int j) {
         char ch = s[i];
         s[i] = s[j];
