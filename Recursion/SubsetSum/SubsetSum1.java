@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.SubsetSum;
 
 import java.util.ArrayList;
 import java.util.Collections;

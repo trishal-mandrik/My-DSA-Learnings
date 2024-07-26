@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.CombinationSum;
 
 import java.util.ArrayList;
 import java.util.Arrays;
