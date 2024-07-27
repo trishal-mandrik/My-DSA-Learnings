@@ -7,14 +7,14 @@ import java.util.List;
 
 public class NQueensApproachOne {
     // start
-    public static List<List <String>> solveNQueens(int n) {
+    public static List<List<String>> solveNQueens(int n) {
         char[][] board = new char[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 board[i][j] = '.';
             }
         }
-        List<List <String>> res = new ArrayList<>();
+        List<List<String>> res = new ArrayList<>();
         dfs(0, board, res);
         return res;
     }
@@ -26,7 +26,7 @@ public class NQueensApproachOne {
         }
 
         for (int row = 0; row < board.length; row++) {
-            if (validate(board, row, col)){
+            if (validate(board, row, col)) {
                 board[row][col] = 'Q';
                 dfs(col + 1, board, res);
                 board[row][col] = '.';
@@ -47,9 +47,9 @@ public class NQueensApproachOne {
         int duprow = row;
         int dupcol = col;
 
-        while (row >= 0 && col >= 0) {
-            if (board[row][col] == 'Q') return false;
-            row--;
+        while (row >= 0 && col >= 0) {                //   \
+            if (board[row][col] == 'Q') return false; //    \
+            row--;                                    //     \
             col--;
         }
 
@@ -61,7 +61,6 @@ public class NQueensApproachOne {
             col--;
         }
 
-        row = duprow;
         col = dupcol;
 
         while (col >= 0 && row < board.length) {
@@ -72,3 +71,8 @@ public class NQueensApproachOne {
         return true;
     }
 }
+
+
+//Time Complexity: Exponential in nature since we are trying out all ways, to be precise its O(N! * N).
+//
+//Space Complexity: O( N2 )

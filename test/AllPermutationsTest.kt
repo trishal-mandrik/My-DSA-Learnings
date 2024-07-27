@@ -1,10 +1,10 @@
 package test;
 
-import Recursion.AllPermutations;
+import Recursion.AllPermutations.AllPermutationsApproachTwo;
 import org.testng.annotations.Test
 
 class AllPermutationsTest {
-    val test = AllPermutations();
+    val test = AllPermutationsApproachTwo();
 
     @Test
     fun `generate all permutations`() {
