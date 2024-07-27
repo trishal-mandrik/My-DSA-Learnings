@@ -28,3 +28,7 @@ public class MColoring {
         return true;
     }
 }
+
+//Time Complexity: O(N^M) (n raised to m)
+//
+//Space Complexity: O(N)
