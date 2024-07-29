@@ -1,4 +1,4 @@
-public class Solution {
+public class NthRootOfM {
     // return 1 if == m
     // return 0 if < m
     // return 2 if > m

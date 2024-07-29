@@ -2,7 +2,7 @@ package Graph;
 
 import java.util.ArrayList;
 
-class Solution {
+class BellmanFordAlgoForSSSP {
     static int[] bellman_ford(int V, ArrayList<ArrayList<Integer>> edges, int S) {
         // Write your code here
         int[] dist = new int[V];
