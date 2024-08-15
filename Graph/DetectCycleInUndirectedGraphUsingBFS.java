@@ -4,23 +4,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Node {
-    int curr, parent;
-
-    public Node(int curr, int parent) {
-        this.curr = curr;
-        this.parent = parent;
-    }
-}
-
-class Solution {
+class DetectCycleInUndirectedGraphUsingBFS {
     // Function to detect cycle in an undirected graph.
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
         // Code here
         boolean[] vis = new boolean[V];
 
         for (int i = 0; i < V; i++) {
-            if (vis[i] == false) {
+            if (!vis[i]) {
                 if (detectCycle(i, vis, adj)) {
                     return true;
                 }
@@ -40,7 +31,7 @@ class Solution {
             q.remove();
 
             for (Integer it : adj.get(curr)) {
-                if (vis[it] == false) {
+                if (!vis[it]) {
                     vis[it] = true;
                     q.add(new Node(it, curr));
                 } else if (parent != it) {

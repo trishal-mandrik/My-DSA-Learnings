@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Solution {
+class DetectCycleDirectedGraphKahn {
     // Function to detect cycle in a directed graph.
     public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {
         // code here
-        int indegree[] = new int[V];
+        int[] indegree = new int[V];
         int cnt = 0;
 
         for (int i = 0; i < V; i++) {

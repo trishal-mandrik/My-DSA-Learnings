@@ -10,7 +10,7 @@ class DFS {
         boolean[] vis = new boolean[V];
 
         for (int i = 0; i < V; i++) {
-            if (vis[i] == false) {
+            if (!vis[i]) {
                 dfs(i, vis, adj, storeDfs);
             }
         }
@@ -22,7 +22,7 @@ class DFS {
         vis[node] = true;
 
         for (Integer it : adj.get(node)) {
-            if (vis[it] == false) {
+            if (!vis[it]) {
                 dfs(it, vis, adj, storeDfs);
             }
         }

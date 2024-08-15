@@ -14,7 +14,7 @@ class Pair {
 
 class Solution {
 
-    private void topoSort(int node, ArrayList<ArrayList<Pair>> adj, int vis[], Stack<Integer> st) {
+    private void topoSort(int node, ArrayList<ArrayList<RowColPair>> adj, int vis[], Stack<Integer> st) {
         vis[node] = 1;
         for (int i = 0; i < adj.get(node).size(); i++) {
             int v = adj.get(node).get(i).first;
@@ -27,10 +27,10 @@ class Solution {
 
     public int[] shortestPath(int N, int M, int[][] edges) {
         // Code here
-        ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
+        ArrayList<ArrayList<RowColPair>> adj = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
-            ArrayList<Pair> temp = new ArrayList<Pair>();
+            ArrayList<RowColPair> temp = new ArrayList<RowColPair>();
             adj.add(temp);
         }
 
@@ -40,7 +40,7 @@ class Solution {
             int u = edges[i][0];
             int v = edges[i][1];
             int wt = edges[i][2];
-            adj.get(u).add(new Pair(v, wt));
+            adj.get(u).add(new RowColPair(v, wt));
         }
 
         int vis[] = new int[N];
