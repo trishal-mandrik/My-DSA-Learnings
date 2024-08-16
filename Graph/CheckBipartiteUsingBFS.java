@@ -1,10 +1,11 @@
 package Graph;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Solution {
+class CheckBipartiteUsingBFS {
     private boolean detectBipartite(int start, ArrayList<ArrayList<Integer>> adj, int[] color) {
         Queue<Integer> q = new LinkedList<>();
         q.add(start);
@@ -27,11 +28,9 @@ class Solution {
 
     public boolean isBipartite(int V, ArrayList<ArrayList<Integer>> adj) {
         // Code here
-        int color[] = new int[V];
+        int[] color = new int[V];
 
-        for (int i = 0; i < V; i++) {
-            color[i] = -1;
-        }
+        Arrays.fill(color, -1);
 
         for (int i = 0; i < V; i++) {
             if (color[i] == -1) {
@@ -44,3 +43,5 @@ class Solution {
         return true;
     }
 }
+
+//TC & SC: Similar to BFS
