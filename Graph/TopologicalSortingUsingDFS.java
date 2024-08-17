@@ -3,19 +3,19 @@ package Graph;
 import java.util.ArrayList;
 import java.util.Stack;
 
-class Solution {
+class TopologicalSortingUsingDFS {
     //Function to return list containing vertices in Topological order. 
     static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {
         Stack<Integer> st = new Stack<>();
-        boolean vis[] = new boolean[V];
+        boolean[] vis = new boolean[V];
 
         for (int i = 0; i < V; i++) {
-            if (vis[i] == false) {
+            if (!vis[i]) {
                 findTopoSort(i, adj, vis, st);
             }
         }
 
-        int topo[] = new int[V];
+        int[] topo = new int[V];
         int ind = 0;
         while (!st.isEmpty()) {
             topo[ind++] = st.pop();
@@ -27,7 +27,7 @@ class Solution {
         vis[node] = true;
 
         for (Integer it : adj.get(node)) {
-            if (vis[it] == false) {
+            if (!vis[it]) {
                 findTopoSort(it, adj, vis, st);
             }
         }
