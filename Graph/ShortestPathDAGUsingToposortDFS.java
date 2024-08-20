@@ -1,20 +1,21 @@
 package Graph;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Stack;
 
-class Pair {
+class EdgeWeightPair {
     int first, second;
 
-    Pair(int _first, int _second) {
-        this.first = _first;
-        this.second = _second;
+    public EdgeWeightPair(int first, int second) {
+        this.second = second;
+        this.first = first;
     }
 }
 
-class Solution {
+class ShortestPathDAGUsingToposortDFS {
 
-    private void topoSort(int node, ArrayList<ArrayList<RowColPair>> adj, int vis[], Stack<Integer> st) {
+    private void topoSort(int node, ArrayList<ArrayList<EdgeWeightPair>> adj, int[] vis, Stack<Integer> st) {
         vis[node] = 1;
         for (int i = 0; i < adj.get(node).size(); i++) {
             int v = adj.get(node).get(i).first;
@@ -27,11 +28,10 @@ class Solution {
 
     public int[] shortestPath(int N, int M, int[][] edges) {
         // Code here
-        ArrayList<ArrayList<RowColPair>> adj = new ArrayList<>();
+        ArrayList<ArrayList<EdgeWeightPair>> adj = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
-            ArrayList<RowColPair> temp = new ArrayList<RowColPair>();
-            adj.add(temp);
+            adj.add(new ArrayList<>());
         }
 
         // We create a graph first in the form of an adjacency list.
@@ -40,10 +40,10 @@ class Solution {
             int u = edges[i][0];
             int v = edges[i][1];
             int wt = edges[i][2];
-            adj.get(u).add(new RowColPair(v, wt));
+            adj.get(u).add(new EdgeWeightPair(v, wt));
         }
 
-        int vis[] = new int[N];
+        int[] vis = new int[N];
         // Now, we perform topo sort using DFS technique
         // and store the result in the stack st.
 
@@ -58,10 +58,8 @@ class Solution {
         // nodes’
         // distance from the source vertex after relaxation of a particular node.
 
-        int dist[] = new int[N];
-        for (int i = 0; i < N; i++) {
-            dist[i] = (int) (1e9);
-        }
+        int[] dist = new int[N];
+        Arrays.fill(dist, (int) (1e9));
 
         dist[0] = 0;
         while (!st.isEmpty()) {

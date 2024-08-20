@@ -4,28 +4,28 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-class Pair {
+class DistanceNodePair {
     int distance, node;
 
-    public Pair(int _dis, int _node) {
+    public DistanceNodePair(int _dis, int _node) {
         distance = _dis;
         node = _node;
     }
 }
 
-class Solution {
+public class DijkstrasAlgoUsingPriorityQueue {
     //Function to find the shortest distance of all the vertices
     //from the source vertex S.
     static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S) {
         // Write your code here
         //min heap
-        PriorityQueue<Pair> pq = new PriorityQueue<>((x, y) -> x.distance - y.distance);
+        PriorityQueue<DistanceNodePair> pq = new PriorityQueue<>((x, y) -> x.distance - y.distance);
 
         int[] dist = new int[V];
         Arrays.fill(dist, (int) (1e9));
 
         dist[S] = 0;
-        pq.add(new Pair(0, S));
+        pq.add(new DistanceNodePair(0, S));
 
         while (!pq.isEmpty()) {
             int dis = pq.peek().distance;
@@ -38,7 +38,7 @@ class Solution {
 
                 if (dis + edgeWeight < dist[adjNode]) {
                     dist[adjNode] = dis + edgeWeight;
-                    pq.add(new Pair(dist[adjNode], adjNode));
+                    pq.add(new DistanceNodePair(dist[adjNode], adjNode));
                 }
             }
         }
