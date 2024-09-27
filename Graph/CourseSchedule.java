@@ -11,10 +11,10 @@ public class CourseSchedule {
         boolean[] pathVis = new boolean[n];
         int[] topo = new int[n];
 
-        ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>(n);
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>(n);
 
         for (int i = 0; i < n; i++) {
-            adj.add(new ArrayList<Integer>());
+            adj.add(new ArrayList<>());
         }
         for (int i = 0; i < m; i++) {
             adj.get(prerequisites.get(i).get(1)).add(prerequisites.get(i).get(0));
@@ -34,7 +34,7 @@ public class CourseSchedule {
         return topo;
     }
 
-    static boolean findTopoSort(int node, ArrayList<ArrayList<Integer>> adj, boolean vis[], Stack<Integer> st, int[] topo, boolean[] pathVis) {
+    static boolean findTopoSort(int node, ArrayList<ArrayList<Integer>> adj, boolean[] vis, Stack<Integer> st, int[] topo, boolean[] pathVis) {
         vis[node] = true;
         pathVis[node] = true;
 

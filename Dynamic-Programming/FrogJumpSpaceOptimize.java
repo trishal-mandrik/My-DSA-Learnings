@@ -1,5 +1,5 @@
 public class FrogJumpSpaceOptimize {
-    public static int frogJump(int n, int heights[]) {
+    public static int frogJump(int n, int[] heights) {
         int prev1 = 0;
         int prev2 = 0;
 
@@ -15,3 +15,6 @@ public class FrogJumpSpaceOptimize {
         return prev1;
     }
 }
+
+//TC: O(N)
+//SC: O(1)

@@ -1,6 +1,6 @@
 package Graph;
 
-class Solution {
+class FloydWarshallAllPairShortestPath {
     public void shortest_distance(int[][] matrix) {
         // Code here 
         // If Matrix[i][j]=-1, it means there is no edge from i to j. Put 1e9 there

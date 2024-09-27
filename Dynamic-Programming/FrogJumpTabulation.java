@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class FrogJumpTabulation {
-    public static int frogJump(int n, int heights[]) {
+    public static int frogJump(int n, int[] heights) {
 
         // Write your code here..
         List<Integer> dp = new ArrayList<>(Collections.nCopies(n, 0));
@@ -19,3 +19,6 @@ public class FrogJumpTabulation {
         return dp.get(n - 1);
     }
 }
+
+//TC: O(N)
+//SC: O(N)
