@@ -1,5 +1,7 @@
+package Frog_Jump;
+
 public class FrogJumpRecursion {
-    public int frogJump(int n, int heights[]) {
+    public int frogJump(int n, int[] heights) {
 
         // Write your code here..
         return f(n - 1, heights);

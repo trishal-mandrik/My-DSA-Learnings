@@ -1,3 +1,5 @@
+package Frog_Jump;
+
 public class FrogJumpSpaceOptimize {
     public static int frogJump(int n, int[] heights) {
         int prev1 = 0;
