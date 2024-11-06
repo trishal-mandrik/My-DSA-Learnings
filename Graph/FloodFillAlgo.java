@@ -3,7 +3,15 @@ package Graph;
 public class FloodFillAlgo {
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
         int iniColor = image[sr][sc];
-        int[][] ans = image; // for copying use nested for loops
+        int n = image.length;
+        int m = image[0].length;
+        int[][] ans = new int[n][m];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                ans[i][j] = image[i][j];
+            }
+        }
         int[] delRow = {-1, 0, 1, 0};
         int[] delCol = {0, 1, 0, -1};
         dfs(sr, sc, ans, image, newColor, delRow, delCol, iniColor);
