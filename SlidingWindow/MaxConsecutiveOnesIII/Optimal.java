@@ -6,13 +6,13 @@ public class Optimal {
         int n = nums.length;
 
         while (r < n) {
-            if(nums[r] == 0) zeros++;
+            if (nums[r] == 0) zeros++;
 
-            if(zeros > k) {
+            if (zeros > k) {
                 if (nums[l] == 0) zeros--;
                 l++;
             }
-            if(zeros <= k) {
+            if (zeros <= k) {
                 int len = r - l + 1;
                 maxLen = Math.max(len, maxLen);
             }

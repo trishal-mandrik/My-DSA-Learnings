@@ -4,7 +4,7 @@ public class Brute {
     public int longestOnes(int[] nums, int k) {
         int maxLen = 0, len;
         int n = nums.length;
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             int zeros = 0;
 
             for (int j = i; j < n; j++) {

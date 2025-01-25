@@ -7,7 +7,7 @@ public class Brute {
         int i = 0, j = 0, max = 0;
         HashSet<Character> hs = new HashSet<>();
         while (j < s.length()) {
-            if (!hs.contains(s.charAt(j))){
+            if (!hs.contains(s.charAt(j))) {
                 hs.add(s.charAt(j));
                 j++;
                 max = Math.max(max, hs.size());
