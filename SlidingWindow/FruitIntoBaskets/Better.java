@@ -11,6 +11,12 @@ public class Better {
         while (r < n) {
             mpp.putIfAbsent(fruits[r], 0);
             mpp.replace(fruits[r], mpp.get(fruits[r]) + 1);
+
+            if (mpp.size() <= 2) {
+                len = r - l + 1;
+                maxLen = Math.max(len, maxLen);
+            }
+
             if (mpp.size() > 2) {
                 while (mpp.size() > 2) {
                     mpp.put(fruits[l], mpp.get(fruits[l]) - 1);
@@ -20,10 +26,6 @@ public class Better {
                     }
                     l++;
                 }
-            }
-            if (mpp.size() <= 2) {
-                len = r - l + 1;
-                maxLen = Math.max(len, maxLen);
             }
             r++;
         }
