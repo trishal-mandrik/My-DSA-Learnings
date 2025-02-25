@@ -20,3 +20,6 @@ public class MaximumPointsYouCanObtainFromCards {
         return maxSum;
     }
 }
+
+//TC: O(2K)
+//SC: O(1)

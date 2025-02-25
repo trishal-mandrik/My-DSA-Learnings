@@ -8,7 +8,7 @@ public class FrogJumpKDistanceRecursion {
     int f(int ind, int[] height, int k) {
         if (ind == 0) return 0;
         int min_steps = Integer.MIN_VALUE;
-        int left = f(ind - 1, height, k) + Math.abs(height[ind] - height[ind - 1]);
+//        int left = f(ind - 1, height, k) + Math.abs(height[ind] - height[ind - 1]);
 
         for (int j = 1; j <= k; j++) {
             if (ind - j >= 0) {
@@ -25,4 +25,4 @@ public class FrogJumpKDistanceRecursion {
 }
 
 //TC: O(N * k);
-//SC: O(N);
+//SC: O(N) + O(N);
