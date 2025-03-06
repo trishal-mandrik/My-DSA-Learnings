@@ -19,7 +19,7 @@ public class MaximumSumOfNonAdjacentElementsMemoization {
         int pick = nums.get(ind) + solve(nums, ind - 2, dp);
         int notPick = solve(nums, ind - 1, dp);
 
-        return Math.max(pick, notPick);
+        return dp[ind] = Math.max(pick, notPick);
     }
 }
 
