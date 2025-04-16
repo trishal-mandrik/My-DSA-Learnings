@@ -1,7 +1,8 @@
-package Array;
+package Array.MoveAllNegativeElementsToEnd;
 
 import java.util.Stack;
 
+// Without changing the position
 public class MoveAllNegativeElementsToEnd {
     public void segregateElements(int[] arr) {
         // Your code goes here
