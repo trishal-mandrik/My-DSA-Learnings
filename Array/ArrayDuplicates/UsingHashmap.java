@@ -11,8 +11,8 @@ public class UsingHashmap {
         Map<Integer, Integer> freqMap = new HashMap<>();
         List<Integer> ans = new ArrayList<>();
 
-        for (int i = 0; i < arr.length; i++) {
-            freqMap.put(arr[i], freqMap.getOrDefault(arr[i], 0) + 1);
+        for (int j : arr) {
+            freqMap.put(j, freqMap.getOrDefault(j, 0) + 1);
         }
 
         for (Map.Entry<Integer, Integer> entry: freqMap.entrySet()) {
