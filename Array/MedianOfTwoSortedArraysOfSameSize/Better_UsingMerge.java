@@ -1,7 +1,7 @@
 package Array.MedianOfTwoSortedArraysOfSameSize;
 
 public class Better_UsingMerge {
-    public double medianOf2(int a[], int b[]) {
+    public double medianOf2(int[] a, int[] b) {
         // Your Code Here
         int n = a.length;
         int i = 0, j = 0;
