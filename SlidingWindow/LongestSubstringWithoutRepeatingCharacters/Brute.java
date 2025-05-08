@@ -1,24 +1,23 @@
 package SlidingWindow.LongestSubstringWithoutRepeatingCharacters;
 
-import java.util.HashSet;
+import java.util.HashMap;
 
 public class Brute {
     public int lengthOfLongestSubstring(String s) {
-        int i = 0, j = 0, max = 0;
-        HashSet<Character> hs = new HashSet<>();
-        while (j < s.length()) {
-            if (!hs.contains(s.charAt(j))) {
-                hs.add(s.charAt(j));
-                j++;
-                max = Math.max(max, hs.size());
-            } else {
-                hs.remove(s.charAt(i));
-                i++;
+        int maxLen = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            HashMap<Integer, Integer> hs = new HashMap<>(256);
+            for (int j = i; j < s.length(); j++) {
+                if (hs.get((int) s.charAt(j)) == 1) break;
+                int len = j - i + 1;
+                maxLen = Math.max(len, maxLen);
+                hs.put((int) s.charAt(j), 1);
             }
         }
-        return max;
+        return maxLen;
     }
 }
 
-//TC: O(N ^ 2);
+//TC: O(N * N);
 //SC: O(256);
