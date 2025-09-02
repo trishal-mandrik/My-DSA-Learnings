@@ -2,12 +2,12 @@ package LinkedList;
 
 public class ListNode {
     public ListNode next;
-    int val;
+    public int val;
 
-    ListNode() {
+    public ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
