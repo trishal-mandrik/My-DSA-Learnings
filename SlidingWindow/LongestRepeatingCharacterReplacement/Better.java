@@ -13,8 +13,9 @@ public class Better {
             mpp.put(c1, mpp.getOrDefault(c1, 0) + 1);
 
             maxFreq = Math.max(maxFreq, mpp.get(c1));
+            int changes = (r - l + 1) - maxFreq;
 
-            if (((r - l + 1) - maxFreq) <= k) {
+            if (changes <= k) {
                 len = r - l + 1;
                 maxLen = Math.max(maxLen, len);
             }

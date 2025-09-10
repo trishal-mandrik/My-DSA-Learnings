@@ -15,7 +15,7 @@ public class Brute {
                 mpp.putIfAbsent(c, 0);
                 mpp.put(c, mpp.get(c) + 1);
 
-                maxFreq = Math.max(maxFreq, mpp.get(s.charAt(i)));
+                maxFreq = Math.max(maxFreq, mpp.get(s.charAt(j)));
                 int changes = (j - i + 1) - maxFreq;
 
                 if (changes <= k) {
@@ -29,3 +29,6 @@ public class Brute {
         return maxLen;
     }
 }
+
+//TC: O(N * N)
+//SC: O(26)

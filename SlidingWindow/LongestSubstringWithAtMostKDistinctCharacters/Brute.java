@@ -28,3 +28,6 @@ public class Brute {
         return maxLen;
     }
 }
+
+//TC: O(n * n) * log(256)
+//SC: O(256)

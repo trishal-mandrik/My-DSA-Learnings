@@ -34,3 +34,6 @@ public class Better {
         return maxLen;
     }
 }
+
+//TC: O(n + n) + log(256)
+//SC: O(256)
