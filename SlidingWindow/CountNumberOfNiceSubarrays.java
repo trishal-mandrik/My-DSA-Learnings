@@ -1,6 +1,6 @@
 package SlidingWindow;
 
-public class CountNumberofNiceSubarrays {
+public class CountNumberOfNiceSubarrays {
     public int numberOfSubarrays(int[] nums, int k) {
         return lessEqualToK(nums, k) - lessEqualToK(nums, k - 1);
     }

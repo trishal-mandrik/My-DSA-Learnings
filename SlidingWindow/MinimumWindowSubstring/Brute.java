@@ -12,6 +12,7 @@ public class Brute {
 
         for (int i = 0; i < m; i++) {
             int cnt = 0;
+//          insert all characters of t in map
             for (int j = 0; j < n; j++) {
                 char ch1 = t.charAt(j);
                 mpp.put(ch1, mpp.getOrDefault(ch1, 0) + 1);
@@ -34,3 +35,6 @@ public class Brute {
         return s.substring(sIndex, minLen);
     }
 }
+
+//TC: O(N^2)
+//SC: O(256)
