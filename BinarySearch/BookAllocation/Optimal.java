@@ -1,6 +1,8 @@
+package BookAllocation;
+
 import java.util.ArrayList;
 
-public class BookAllocation {
+public class Optimal {
     static boolean isPossibleSolution(ArrayList<Integer> arr, int n, int m, int mid) {
         int studentCount = 1;
         int pageSum = 0;
