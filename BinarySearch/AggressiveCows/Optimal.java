@@ -1,13 +1,15 @@
+package AggressiveCows;
+
 import java.util.Arrays;
 
-public class AggressiveCows {
+public class Optimal {
     static boolean canWePlace(int[] stalls, int dist, int cows) {
         int cntCows = 1, last = stalls[0];
 
-        for (int i = 0; i < stalls.length; i++) {
-            if (stalls[i] - last >= dist) {
+        for (int stall : stalls) {
+            if (stall - last >= dist) {
                 cntCows++;
-                last = stalls[i];
+                last = stall;
             }
             if (cntCows >= cows) return true;
         }
