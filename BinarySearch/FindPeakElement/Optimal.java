@@ -1,6 +1,8 @@
+package FindPeakElement;
+
 import java.util.ArrayList;
 
-public class Solution {
+public class Optimal {
     public static int findPeakElement(ArrayList<Integer> arr) {
         // Write your code here.
         int n = arr.size();
@@ -18,10 +20,15 @@ public class Solution {
                 return mid;
             } else if (arr.get(mid) > arr.get(mid - 1)) {
                 low = mid + 1;
-            } else {
+            } else if (arr.get(mid) > arr.get(mid + 1)) {
                 high = mid - 1;
+            } else { // handle the case when both sides are greater (multiple peaks)
+                low = mid + 1;
             }
         }
         return -1;
     }
-};
+}
+
+// TC: O(logN)
+// SC: O(1)
