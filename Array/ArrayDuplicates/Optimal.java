@@ -14,7 +14,7 @@ public class Optimal {
         }
 
         for (int i = 0; i < n; i++) {
-            if (arr[i] / n >= 2){
+            if (arr[i] / n >= 2) {
                 duplicates.add(i);
             }
         }

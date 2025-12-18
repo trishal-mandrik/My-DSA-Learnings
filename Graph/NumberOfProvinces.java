@@ -1,5 +1,6 @@
 package Graph;
-import java.util.*;
+
+import java.util.ArrayList;
 
 public class NumberOfProvinces {
     int numProvinces(ArrayList<ArrayList<Integer>> adj, int V) {
@@ -31,7 +32,7 @@ public class NumberOfProvinces {
 
     private void dfs(int node, ArrayList<ArrayList<Integer>> adjLs, boolean[] vis) {
         vis[node] = true;
-        for (Integer it: adjLs.get(node)) {
+        for (Integer it : adjLs.get(node)) {
             if (!vis[it]) {
                 dfs(it, adjLs, vis);
             }

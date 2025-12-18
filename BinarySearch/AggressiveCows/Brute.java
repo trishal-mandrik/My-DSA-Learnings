@@ -6,7 +6,7 @@ public class Brute {
     public static int aggressiveCows(int[] stalls, int k) {
         Arrays.sort(stalls);
         int n = stalls.length;
-        int limit = stalls[n-1] - stalls[0];
+        int limit = stalls[n - 1] - stalls[0];
 
         for (int i = 0; i <= limit; i++) {
             if (!canWePlace(stalls, i, k)) {

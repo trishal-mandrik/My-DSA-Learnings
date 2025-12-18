@@ -29,3 +29,5 @@ public class NthRootOfM {
     }
 }
 
+// TC: O(logM * N)
+// SC: O(1)

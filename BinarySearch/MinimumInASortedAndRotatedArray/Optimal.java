@@ -8,7 +8,7 @@ public class Optimal {
 
         while (low <= high) {
 
-            if(arr[low] <= arr[high]) {
+            if (arr[low] <= arr[high]) {
                 ans = Math.min(ans, arr[low]);
                 break;
             }

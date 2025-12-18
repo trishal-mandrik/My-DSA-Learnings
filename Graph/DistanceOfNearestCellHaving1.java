@@ -27,14 +27,14 @@ public class DistanceOfNearestCellHaving1 {
         for (int row = 0; row < n; row++) {
             for (int col = 0; col < m; col++) {
                 // start BFS if cell contains 1
-                if (grid[row][col] == 1){
+                if (grid[row][col] == 1) {
                     vis[row][col] = true;
                     q.add(new RowColDistPair(row, col, 0));
                 }
             }
         }
 
-        while (!q.isEmpty()){
+        while (!q.isEmpty()) {
             int row = q.peek().row;
             int col = q.peek().col;
             int dist = q.peek().dist;

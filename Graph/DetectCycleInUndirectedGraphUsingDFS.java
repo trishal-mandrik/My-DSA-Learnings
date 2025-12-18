@@ -20,8 +20,8 @@ public class DetectCycleInUndirectedGraphUsingDFS {
     private boolean detectCycle(int node, boolean[] vis, ArrayList<ArrayList<Integer>> adj, int parent) {
         vis[node] = true;
 
-        for (Integer it: adj.get(node)){
-            if (!vis[it]){
+        for (Integer it : adj.get(node)) {
+            if (!vis[it]) {
                 detectCycle(it, vis, adj, node);
             } else if (parent != it) {
                 return true;

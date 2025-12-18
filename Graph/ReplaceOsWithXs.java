@@ -38,12 +38,12 @@ public class ReplaceOsWithXs {
         for (int i = 0; i < n; i++) {
             // first col
             if (!vis[i][0] && mat[i][0] == 'O') {
-                dfs(i, 0, vis, mat, n , m);
+                dfs(i, 0, vis, mat, n, m);
             }
 
             // last col
             if (!vis[i][m - 1] && mat[i][m - 1] == 'O') {
-                dfs(i, m - 1, vis, mat, n , m);
+                dfs(i, m - 1, vis, mat, n, m);
             }
         }
 

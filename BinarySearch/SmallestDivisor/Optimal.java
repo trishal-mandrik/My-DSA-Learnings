@@ -1,7 +1,9 @@
 package SmallestDivisor;
 
 import java.util.Arrays;
+
 import static SmallestDivisor.Brute.isPossible;
+
 public class Optimal {
     int smallestDivisor(int[] arr, int k) {
         int low = 1, high = Arrays.stream(arr).max().isPresent() ? Arrays.stream(arr).max().getAsInt() : 0;
@@ -9,7 +11,7 @@ public class Optimal {
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
-            if(isPossible(arr, mid, k)){
+            if (isPossible(arr, mid, k)) {
                 ans = mid;
                 high = mid - 1;
             } else {

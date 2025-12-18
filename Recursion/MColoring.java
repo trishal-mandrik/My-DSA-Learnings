@@ -9,7 +9,7 @@ public class MColoring {
     }
 
     private boolean solve(int node, List<Integer>[] G, int[] color, int m, int n) {
-        if(node == n) return true;
+        if (node == n) return true;
 
         for (int i = 1; i <= m; i++) {
             if (isSafe(node, G, color, i)) {
@@ -22,7 +22,7 @@ public class MColoring {
     }
 
     private boolean isSafe(int node, List<Integer>[] G, int[] color, int col) {
-        for (int it: G[node]) {
+        for (int it : G[node]) {
             if (color[it] == col) return false;
         }
         return true;

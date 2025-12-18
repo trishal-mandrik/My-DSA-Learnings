@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Brute {
     public int findPages(int[] arr, int k) {
         int n = arr.length;
-        if(k > n) return -1;
+        if (k > n) return -1;
 
         int minPages = Arrays.stream(arr).max().isPresent() ? Arrays.stream(arr).max().getAsInt() : 0;
         int maxPages = Arrays.stream(arr).sum();

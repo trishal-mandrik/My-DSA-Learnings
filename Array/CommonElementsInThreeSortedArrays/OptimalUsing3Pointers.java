@@ -10,7 +10,7 @@ public class OptimalUsing3Pointers {
         List<Integer> common = new ArrayList<>();
 
         while (i < arr1.size() && j < arr2.size() && k < arr3.size()) {
-            if (Objects.equals(arr1.get(i), arr2.get(j)) && Objects.equals(arr2.get(j), arr3.get(k))){
+            if (Objects.equals(arr1.get(i), arr2.get(j)) && Objects.equals(arr2.get(j), arr3.get(k))) {
                 common.add(arr1.get(i));
                 i++;
                 j++;

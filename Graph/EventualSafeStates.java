@@ -1,5 +1,7 @@
 package Graph;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EventualSafeStates {
     List<Integer> eventualSafeNodes(int V, List<List<Integer>> adj) {
@@ -26,8 +28,8 @@ public class EventualSafeStates {
         vis[node] = true;
         pathVis[node] = true;
 
-        for (Integer it: adj.get(node)){
-            if (!vis[it]){
+        for (Integer it : adj.get(node)) {
+            if (!vis[it]) {
                 if (dfsCheck(it, adj, vis, pathVis, check))
                     return true;
             } else if (pathVis[it]) {

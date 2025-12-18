@@ -9,8 +9,8 @@ public class MaximumSumOfNonAdjacentElementsRecursion {
     }
 
     static int solve(ArrayList<Integer> nums, int ind) {
-        if(ind == 0) return nums.get(ind);
-        if(ind < 0) return 0;
+        if (ind == 0) return nums.get(ind);
+        if (ind < 0) return 0;
 
         int pick = nums.get(ind) + solve(nums, ind - 2);
         int notPick = solve(nums, ind - 1);

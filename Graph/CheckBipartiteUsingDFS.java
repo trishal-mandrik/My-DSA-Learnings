@@ -24,9 +24,9 @@ public class CheckBipartiteUsingDFS {
     private boolean detectBipartite(int i, ArrayList<ArrayList<Integer>> adj, int[] color, int col) {
         color[i] = col;
 
-        for (Integer it: adj.get(i)){
+        for (Integer it : adj.get(i)) {
             if (color[it] == -1) {
-                if(!detectBipartite(it, adj, color, 1 - col)) return false;
+                if (!detectBipartite(it, adj, color, 1 - col)) return false;
             } else if (color[it] == color[i]) {
                 return false;
             }

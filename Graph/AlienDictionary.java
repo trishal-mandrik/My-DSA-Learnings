@@ -20,7 +20,7 @@ public class AlienDictionary {
             int len = Integer.min(s1.length(), s2.length());
 
             for (int j = 0; j < len; j++) {
-                if (s1.charAt(j) != s2.charAt(j)){
+                if (s1.charAt(j) != s2.charAt(j)) {
                     adj.get(s1.charAt(j) - 'a').add(s2.charAt(j) - 'a');
                     break;
                 }
@@ -28,8 +28,8 @@ public class AlienDictionary {
         }
         List<Integer> topo = topoSort(K, adj);
         String ans = "";
-        for (int it: topo) {
-            ans += (char)(it + (int)('a'));
+        for (int it : topo) {
+            ans += (char) (it + (int) ('a'));
         }
         return ans;
     }

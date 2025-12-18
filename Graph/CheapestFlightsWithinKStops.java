@@ -42,17 +42,17 @@ public class CheapestFlightsWithinKStops {
             q.remove();
 
             if (stops > k) continue;
-            for (DistanceNodePair it: adj.get(node)){
+            for (DistanceNodePair it : adj.get(node)) {
                 int adjNode = it.node;
                 int edw = it.distance;
 
-                if(cost + edw < dist[adjNode] && stops <= k) {
+                if (cost + edw < dist[adjNode] && stops <= k) {
                     dist[adjNode] = cost + edw;
                     q.add(new DistanceNodeStopsPair(cost + edw, adjNode, stops + 1));
                 }
             }
         }
-        if(dist[dst] == 1e9) return -1;
+        if (dist[dst] == 1e9) return -1;
         return dist[dst];
     }
 }

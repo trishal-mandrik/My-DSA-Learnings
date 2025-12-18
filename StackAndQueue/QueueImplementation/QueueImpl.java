@@ -8,11 +8,11 @@ public class QueueImpl {
     int[] queue = new int[maxSize];
 
     public void enqueue(int data) {
-        if(rear == maxSize - 1) {
+        if (rear == maxSize - 1) {
             System.out.println("Queue Overflow");
         }
 
-        if (currSize == 0){
+        if (currSize == 0) {
             front = 0;
             rear = 0;
         } else {
@@ -28,7 +28,7 @@ public class QueueImpl {
             return -1;
         }
         int element = queue[front];
-        if(currSize == 1) {
+        if (currSize == 1) {
             front = -1;
             rear = -1;
         } else {

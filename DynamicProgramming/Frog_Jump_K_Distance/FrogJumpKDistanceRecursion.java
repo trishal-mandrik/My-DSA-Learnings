@@ -20,7 +20,7 @@ public class FrogJumpKDistanceRecursion {
     }
 
     int frogJump(int[] height, int k, int n) {
-        return solveUtil(n-1, height, k);
+        return solveUtil(n - 1, height, k);
     }
 }
 

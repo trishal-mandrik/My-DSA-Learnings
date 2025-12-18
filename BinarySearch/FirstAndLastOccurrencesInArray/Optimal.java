@@ -1,7 +1,5 @@
 package FirstAndLastOccurrencesInArray;
 
-import LowerAndUpperBound.LowerBound;
-
 import java.util.ArrayList;
 
 import static LowerAndUpperBound.LowerBound.lowerBound;

@@ -8,7 +8,7 @@ public class Memoization {
         int n = grid.length;
         int m = grid[0].length;
         int[][] dp = new int[n][m];
-        for(int[] it: dp) Arrays.fill(it, -1);
+        for (int[] it : dp) Arrays.fill(it, -1);
         return getMinimumPathSum(n - 1, m - 1, grid, dp);
     }
 

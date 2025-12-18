@@ -10,7 +10,7 @@ public class AllPermutationsApproachTwo {
         s[j] = ch;
     }
 
-    void permutationHelper(char s[], int index, ArrayList < String > res) {
+    void permutationHelper(char s[], int index, ArrayList<String> res) {
         if (index == s.length) {
             String str = new String(s);
 
@@ -23,9 +23,10 @@ public class AllPermutationsApproachTwo {
             swap(s, i, index);
         }
     }
+
     public String getPermutation(int n, int k) {
         String s = "";
-        ArrayList < String > res = new ArrayList < > ();
+        ArrayList<String> res = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
             s += i;
         }

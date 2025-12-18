@@ -18,7 +18,7 @@ public class RatInAMazeApproachTwo {
     }
 
     private void solve(int i, int j, int[][] m, int n, int[][] vis, ArrayList<String> ans, String move, int[] di, int[] dj) {
-        if (i == n-1 && j == n-1) {
+        if (i == n - 1 && j == n - 1) {
             ans.add(move);
             return;
         }
@@ -29,7 +29,7 @@ public class RatInAMazeApproachTwo {
             int nexti = i + di[ind];
             int nextj = j + dj[ind];
 
-            if (nexti >= 0 && nextj >= 0 && nexti < n && nextj < n && vis[nexti][nextj] == 0 && m[nexti][nextj] == 1){
+            if (nexti >= 0 && nextj >= 0 && nexti < n && nextj < n && vis[nexti][nextj] == 0 && m[nexti][nextj] == 1) {
                 vis[i][j] = 1;
                 solve(nexti, nextj, m, n, vis, ans, move + dir.charAt(ind), di, dj);
                 vis[i][j] = 0;

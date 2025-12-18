@@ -43,7 +43,7 @@ public class NumberOfIslands {
             q.remove();
 
 //            traverse in the neighbours and mark them if its a land
-            for (int delrow = -1; delrow <= 1 ; delrow++) {
+            for (int delrow = -1; delrow <= 1; delrow++) {
                 for (int delcol = -1; delcol <= 1; delcol++) {
                     int nrow = row + delrow;
                     int ncol = col + delcol;

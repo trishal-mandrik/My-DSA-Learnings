@@ -6,10 +6,10 @@ public class Optimal {
         if (m == 0) return 0;
         int low = 1, high = m;
 
-        while(low <= high){
+        while (low <= high) {
             int mid = low + (high - low) / 2;
             long midN = multiplier(mid, n, m);
-            if(midN == 1) {
+            if (midN == 1) {
                 return mid;
             } else if (midN == 0) {
                 low = mid + 1;

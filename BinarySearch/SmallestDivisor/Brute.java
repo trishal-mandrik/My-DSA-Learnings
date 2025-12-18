@@ -7,8 +7,8 @@ public class Brute {
         // Code here
         int maxi = Arrays.stream(arr).max().isPresent() ? Arrays.stream(arr).max().getAsInt() : 0;
 
-        for(int d = 1; d <= maxi; d++) {
-            if(isPossible(arr, d, k)) return d;
+        for (int d = 1; d <= maxi; d++) {
+            if (isPossible(arr, d, k)) return d;
         }
         return 1;
     }
@@ -16,7 +16,7 @@ public class Brute {
     static boolean isPossible(int[] arr, int divisor, int k) {
         int sum = 0;
 
-        for(int i: arr) {
+        for (int i : arr) {
             sum += Math.ceil((double) i / (double) divisor);
         }
         return sum <= k;

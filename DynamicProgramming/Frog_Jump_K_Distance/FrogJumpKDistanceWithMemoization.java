@@ -36,7 +36,7 @@ public class FrogJumpKDistanceWithMemoization {
     }
 
     public static void main(String[] args) {
-        int[] height = { 30, 10, 60, 10, 60, 50 };
+        int[] height = {30, 10, 60, 10, 60, 50};
         int n = height.length;
         int k = 2;
         System.out.println(solve(n, height, k)); // Print the result of the solve function

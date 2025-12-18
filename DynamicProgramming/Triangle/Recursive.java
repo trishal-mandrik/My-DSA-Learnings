@@ -1,7 +1,5 @@
 package Triangle;
 
-import java.util.Arrays;
-
 public class Recursive {
     public static int minimumPathSum(int[][] triangle, int n) {
         // Write your code here.

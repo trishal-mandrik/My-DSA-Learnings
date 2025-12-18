@@ -22,7 +22,7 @@ public class DifferentNumberOfElements {
 
         boolean posi = true;
         arr.clear();
-        while (!positive.isEmpty() && !negative.isEmpty()){
+        while (!positive.isEmpty() && !negative.isEmpty()) {
             if (posi) {
                 arr.add(positive.poll());
                 posi = false;

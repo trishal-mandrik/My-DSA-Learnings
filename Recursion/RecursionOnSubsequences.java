@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class RecursionOnSubsequences {
     void printF(int ind, ArrayList<Integer> ds, int[] arr, int n) {
-        if(ind == n) {
-            for (int it: ds) {
+        if (ind == n) {
+            for (int it : ds) {
                 System.out.print(it + " ");
             }
             if (ds.isEmpty()) System.out.print("{}");

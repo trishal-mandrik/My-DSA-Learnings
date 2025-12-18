@@ -28,3 +28,6 @@ public class Optimal {
 
 // TC: O(log N)
 // SC: O(1)
+
+// (even, odd) -> move right
+// (odd, even) -> move left

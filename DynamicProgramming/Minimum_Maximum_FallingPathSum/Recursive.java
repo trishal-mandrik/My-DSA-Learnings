@@ -7,7 +7,7 @@ public class Recursive {
         int m = matrix[0].length;
         int maxi = Integer.MIN_VALUE;
         for (int j = 0; j < m; j++) {
-            int ans = getMaxPathSum(n-1, j, m, matrix);
+            int ans = getMaxPathSum(n - 1, j, m, matrix);
             maxi = Math.max(maxi, ans);
         }
         return maxi;
@@ -20,9 +20,9 @@ public class Recursive {
         if (i == 0)
             return matrix[0][j];
 
-        int up = matrix[i][j] + getMaxPathSum(i-1, j, m, matrix);
-        int leftDiagonal = matrix[i][j] + getMaxPathSum(i-1, j-1, m, matrix);
-        int rightDiagonal = matrix[i][j] + getMaxPathSum(i-1, j+1, m, matrix);
+        int up = matrix[i][j] + getMaxPathSum(i - 1, j, m, matrix);
+        int leftDiagonal = matrix[i][j] + getMaxPathSum(i - 1, j - 1, m, matrix);
+        int rightDiagonal = matrix[i][j] + getMaxPathSum(i - 1, j + 1, m, matrix);
 
         return Math.max(up, Math.max(leftDiagonal, rightDiagonal));
     }

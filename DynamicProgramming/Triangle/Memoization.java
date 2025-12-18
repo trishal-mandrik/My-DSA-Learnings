@@ -6,7 +6,7 @@ public class Memoization {
     public static int minimumPathSum(int[][] triangle, int n) {
         // Write your code here.
         int[][] dp = new int[n][n];
-        for (int[] it: dp) {
+        for (int[] it : dp) {
             Arrays.fill(it, -1);
         }
         return getMinimumPathSum(0, 0, n, triangle, dp);

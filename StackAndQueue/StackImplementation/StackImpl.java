@@ -7,7 +7,7 @@ public class StackImpl {
     int[] stack = new int[maxSize];
 
     public void push(int data) {
-        if(top == maxSize - 1) {
+        if (top == maxSize - 1) {
             System.out.println("Stack Overflow");
         } else {
             top++;
@@ -25,7 +25,7 @@ public class StackImpl {
     }
 
     public int peek() {
-        if(top == -1) {
+        if (top == -1) {
             System.out.println("Stack is empty");
             return -1;
         } else {

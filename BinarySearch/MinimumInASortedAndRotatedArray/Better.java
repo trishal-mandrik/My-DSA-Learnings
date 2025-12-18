@@ -10,7 +10,7 @@ public class Better {
             int mid = low + (high - low) / 2;
 
             if (arr[low] <= arr[mid]) {
-               ans = Math.min(ans, arr[low]);
+                ans = Math.min(ans, arr[low]);
                 low = mid + 1;
             } else {
                 ans = Math.min(ans, arr[mid]);

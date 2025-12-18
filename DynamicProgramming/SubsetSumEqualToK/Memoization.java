@@ -7,7 +7,7 @@ public class Memoization {
         // Write your code here.
         int[][] dp = new int[n][k + 1];
 
-        for(int[] row: dp){
+        for (int[] row : dp) {
             Arrays.fill(row, -1);
         }
         return solve(n - 1, k, arr, dp);

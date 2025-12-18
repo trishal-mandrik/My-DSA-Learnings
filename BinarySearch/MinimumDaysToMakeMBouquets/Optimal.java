@@ -6,11 +6,11 @@ public class Optimal {
     public int minDaysBloom(int[] arr, int k, int m) {
         long minFlowers = (long) k * m;
         int n = arr.length;
-        if(minFlowers > n) return -1;
+        if (minFlowers > n) return -1;
 
         int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
 
-        for(int i: arr) {
+        for (int i : arr) {
             min = Math.min(i, min);
             max = Math.max(i, max);
         }
@@ -20,7 +20,7 @@ public class Optimal {
 
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if(isPossible(arr, mid, k, m)) {
+            if (isPossible(arr, mid, k, m)) {
                 ans = mid;
                 high = mid - 1;
             } else {

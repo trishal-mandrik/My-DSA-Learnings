@@ -19,7 +19,7 @@ public class Better {
                 maxLen = Math.max(len, maxLen);
             }
 
-            if(mpp.size() > k) {
+            if (mpp.size() > k) {
                 while (mpp.size() > k) {
                     mpp.put(str.charAt(l), mpp.get(str.charAt(l)) - 1);
 

@@ -16,7 +16,7 @@ public class Optimal {
             while (mpp.size() > k) {
                 mpp.put(nums[l], mpp.get(nums[l]) - 1);
 
-                if(mpp.get(nums[l]) == 0)
+                if (mpp.get(nums[l]) == 0)
                     mpp.remove(nums[l]);
 
                 l++;

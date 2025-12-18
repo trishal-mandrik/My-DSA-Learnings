@@ -15,7 +15,7 @@ public class UsingHashmap {
             freqMap.put(j, freqMap.getOrDefault(j, 0) + 1);
         }
 
-        for (Map.Entry<Integer, Integer> entry: freqMap.entrySet()) {
+        for (Map.Entry<Integer, Integer> entry : freqMap.entrySet()) {
             if (entry.getValue() > 1) {
                 ans.add(entry.getKey());
             }

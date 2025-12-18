@@ -13,7 +13,7 @@ public class NQueensApproachTwo {
             }
         }
         List<List<String>> res = new ArrayList<>();
-        int[] leftRow =  new int[n];
+        int[] leftRow = new int[n];
         int[] upperDiagonal = new int[2 * n - 1];
         int[] lowerDiagonal = new int[2 * n - 1];
         solve(0, board, res, leftRow, lowerDiagonal, upperDiagonal);
@@ -21,7 +21,7 @@ public class NQueensApproachTwo {
     }
 
     private void solve(int col, char[][] board, List<List<String>> res, int[] leftRow, int[] lowerDiagonal, int[] upperDiagonal) {
-        if(col == board.length) {
+        if (col == board.length) {
             res.add(construct(board));
             return;
         }

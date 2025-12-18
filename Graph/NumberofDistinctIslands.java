@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class NumberofDistinctIslands {
-    
+
     int countDistinctIslands(int[][] grid) {
         // Your Code here
         int n = grid.length;

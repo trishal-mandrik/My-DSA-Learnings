@@ -24,7 +24,7 @@ public class OptimalUsingBinarySearch {
             int r2 = (mid2 == n2) ? Integer.MAX_VALUE : b[mid2];
 
             // If it is a valid partition
-            if(l1 <= r2 && l2 <= r1) {
+            if (l1 <= r2 && l2 <= r1) {
                 // If the total elements are even, then median is
                 // the average of two middle elements
 
@@ -41,7 +41,7 @@ public class OptimalUsingBinarySearch {
             if (l1 > r2)
                 high = mid1 - 1;
 
-            // Check if we need to take more elements from a[]
+                // Check if we need to take more elements from a[]
             else
                 low = mid1 + 1;
         }

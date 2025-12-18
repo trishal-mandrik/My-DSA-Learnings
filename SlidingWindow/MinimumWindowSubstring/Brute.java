@@ -19,7 +19,7 @@ public class Brute {
             }
             for (int j = 0; j < m; j++) {
                 char ch2 = t.charAt(j);
-                if(mpp.getOrDefault(ch2, 0) > 0)
+                if (mpp.getOrDefault(ch2, 0) > 0)
                     cnt++;
                 mpp.put(ch2, mpp.get(ch2) - 1);
 

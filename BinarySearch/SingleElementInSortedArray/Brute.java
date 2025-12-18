@@ -5,9 +5,9 @@ public class Brute {
         // code here
         int ind = 0;
         int n = arr.length;
-        while(ind < n) {
-            if(ind + 1 < n) {
-                if(arr[ind] == arr[ind + 1]) {
+        while (ind < n) {
+            if (ind + 1 < n) {
+                if (arr[ind] == arr[ind + 1]) {
                     ind += 2;
                 } else {
                     return arr[ind];

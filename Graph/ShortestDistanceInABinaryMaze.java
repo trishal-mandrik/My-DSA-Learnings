@@ -17,7 +17,7 @@ public class ShortestDistanceInABinaryMaze {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                dist[i][j] = (int)(1e9);
+                dist[i][j] = (int) (1e9);
             }
         }
         // keep distance at first in pair
@@ -29,7 +29,7 @@ public class ShortestDistanceInABinaryMaze {
         dist[source[0]][source[1]] = 0;
         q.add(new RowColDistPair(source[0], source[1], 0));
 
-        while (!q.isEmpty()){
+        while (!q.isEmpty()) {
             int row = q.peek().row;
             int col = q.peek().col;
             int distance = q.peek().dist;

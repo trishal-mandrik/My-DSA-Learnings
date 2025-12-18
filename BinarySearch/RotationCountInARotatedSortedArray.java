@@ -6,7 +6,7 @@ public class RotationCountInARotatedSortedArray {
 
         while (low <= high) {
 
-            if(arr[low] <= arr[high]) {
+            if (arr[low] <= arr[high]) {
                 if (arr[low] < ans) {
                     index = low;
                 }
@@ -26,7 +26,6 @@ public class RotationCountInARotatedSortedArray {
                     index = mid;
                     ans = arr[mid];
                 }
-                ans = Math.min(ans, arr[mid]);
                 high = mid - 1;
             }
         }

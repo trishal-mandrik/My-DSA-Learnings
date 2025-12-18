@@ -9,23 +9,23 @@ public class BruteUsingTreeMap {
         // Code Here
         TreeMap<Integer, Integer> map = new TreeMap<>();
 
-        for (int ele: arr1) {
+        for (int ele : arr1) {
             map.put(ele, 1);
         }
-        for (int ele: arr2) {
-            if(map.containsKey(ele) && map.get(ele) == 1) {
+        for (int ele : arr2) {
+            if (map.containsKey(ele) && map.get(ele) == 1) {
                 map.put(ele, 2);
             }
         }
-        for (int ele: arr3) {
-            if(map.containsKey(ele) && map.get(ele) == 1) {
+        for (int ele : arr3) {
+            if (map.containsKey(ele) && map.get(ele) == 1) {
                 map.put(ele, 3);
             }
         }
 
         List<Integer> commonElements = new ArrayList<>();
 
-        for (int ele: map.keySet()) {
+        for (int ele : map.keySet()) {
             if (map.get(ele) == 3) {
                 commonElements.add(ele);
             }

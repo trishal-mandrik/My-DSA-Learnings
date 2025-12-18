@@ -7,9 +7,9 @@ public class Brute {
         // code here
         int max = Arrays.stream(arr).max().isPresent() ? Arrays.stream(arr).max().getAsInt() : 0;
 
-        for(int bananas = 1; bananas <= max; bananas++) {
+        for (int bananas = 1; bananas <= max; bananas++) {
             int totalH = calculateHours(arr, bananas);
-            if(totalH <= k){
+            if (totalH <= k) {
                 return bananas;
             }
         }

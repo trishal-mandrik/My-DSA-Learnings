@@ -1,5 +1,8 @@
 package SlidingWindow.CountDistinctElementsInEveryWindowGfg;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Optimal {
     ArrayList<Integer> countDistinct(int[] arr, int k) {
@@ -8,13 +11,13 @@ public class Optimal {
         Map<Integer, Integer> mpp = new HashMap<>();
         ArrayList<Integer> ans = new ArrayList<>();
 
-        while(r < n) {
+        while (r < n) {
             mpp.put(arr[r], mpp.getOrDefault(arr[r], 0) + 1);
 
-            if(r - l + 1 == k) {
+            if (r - l + 1 == k) {
                 ans.add(mpp.size());
                 mpp.put(arr[l], mpp.get(arr[l]) - 1);
-                if(mpp.get(arr[l]) == 0) mpp.remove(arr[l]);
+                if (mpp.get(arr[l]) == 0) mpp.remove(arr[l]);
                 l++;
             }
             r++;

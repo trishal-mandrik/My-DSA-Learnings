@@ -21,7 +21,7 @@ public class Memoization {
 
         if (i < 0 || j < 0) return 0;
 
-        if(dp[i][j] != -1) return dp[i][j];
+        if (dp[i][j] != -1) return dp[i][j];
         int up = getPathsCount(i - 1, j, mat, dp);
         int left = getPathsCount(i, j - 1, mat, dp);
 

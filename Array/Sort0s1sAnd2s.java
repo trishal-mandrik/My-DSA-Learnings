@@ -13,8 +13,7 @@ public class Sort0s1sAnd2s {
                 swap(arr, low, mid);
                 low++;
                 mid++;
-            }
-            else if (arr[mid] == 1) mid++;
+            } else if (arr[mid] == 1) mid++;
 
             else {
                 swap(arr, mid, high);

@@ -23,7 +23,7 @@ public class Brute {
         if (merge.length % 2 == 0) {
             int ind1 = (merge.length / 2);
             int ind2 = (merge.length / 2 + 1);
-            return (merge[ind1] + merge[ind2] ) / 2.0;
+            return (merge[ind1] + merge[ind2]) / 2.0;
         } else {
             int middleInd = merge.length / 2;
             return merge[middleInd];

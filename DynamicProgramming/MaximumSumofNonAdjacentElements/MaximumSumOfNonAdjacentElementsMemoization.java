@@ -12,9 +12,9 @@ public class MaximumSumOfNonAdjacentElementsMemoization {
     }
 
     static int solve(ArrayList<Integer> nums, int ind, int[] dp) {
-        if(ind == 0) return nums.get(ind);
-        if(ind < 0) return 0;
-        if(dp[ind] != -1) return dp[ind];
+        if (ind == 0) return nums.get(ind);
+        if (ind < 0) return 0;
+        if (dp[ind] != -1) return dp[ind];
 
         int pick = nums.get(ind) + solve(nums, ind - 2, dp);
         int notPick = solve(nums, ind - 1, dp);

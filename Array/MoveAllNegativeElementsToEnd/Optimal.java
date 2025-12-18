@@ -1,4 +1,5 @@
 package Array.MoveAllNegativeElementsToEnd;
+
 import static Array.BinaryArraySorting.swap;
 
 public class Optimal {
@@ -10,7 +11,7 @@ public class Optimal {
                 swap(arr, i, j);
                 i++;
                 j--;
-            } else if(arr[i] >= 0){
+            } else if (arr[i] >= 0) {
                 i++;
             }
         }

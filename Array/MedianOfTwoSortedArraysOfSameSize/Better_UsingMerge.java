@@ -21,7 +21,7 @@ public class Better_UsingMerge {
             // If only a has remaining elements
             else if (i < n)
                 m1 = a[i++];
-            // If only b has remaining elements
+                // If only b has remaining elements
             else
                 m1 = b[j++];
         }
