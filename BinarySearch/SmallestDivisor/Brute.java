@@ -10,14 +10,14 @@ public class Brute {
         for (int d = 1; d <= maxi; d++) {
             if (isPossible(arr, d, k)) return d;
         }
-        return 1;
+        return -1;
     }
 
     static boolean isPossible(int[] arr, int divisor, int k) {
         int sum = 0;
 
         for (int i : arr) {
-            sum += Math.ceil((double) i / (double) divisor);
+            sum += (int) Math.ceil((double) i / (double) divisor);
         }
         return sum <= k;
     }

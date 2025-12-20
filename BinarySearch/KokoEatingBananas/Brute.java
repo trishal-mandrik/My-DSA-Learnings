@@ -19,7 +19,7 @@ public class Brute {
     static int calculateHours(int[] arr, int bananasPerHour) {
         int totalH = 0;
         for (int j : arr) {
-            totalH += Math.ceil((double) j / (double) bananasPerHour);
+            totalH += (int) Math.ceil((double) j / (double) bananasPerHour);
         }
         return totalH;
     }
