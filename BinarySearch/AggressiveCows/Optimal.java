@@ -4,16 +4,7 @@ import java.util.Arrays;
 
 public class Optimal {
     static boolean canWePlace(int[] stalls, int dist, int cows) {
-        int cntCows = 1, last = stalls[0];
-
-        for (int stall : stalls) {
-            if (stall - last >= dist) {
-                cntCows++;
-                last = stall;
-            }
-            if (cntCows >= cows) return true;
-        }
-        return false;
+        return Brute.canWePlace(stalls, dist, cows);
     }
 
     public static int aggressiveCows(int[] stalls, int k) {

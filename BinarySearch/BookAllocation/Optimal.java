@@ -45,3 +45,6 @@ public class Optimal {
         return ans;
     }
 }
+
+// TC: O(N * log(sum(arr[])-max(arr[])+1)) where N is the number of books
+// SC: O(1)

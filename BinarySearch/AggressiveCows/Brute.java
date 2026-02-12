@@ -8,7 +8,7 @@ public class Brute {
         int n = stalls.length;
         int limit = stalls[n - 1] - stalls[0];
 
-        for (int i = 0; i <= limit; i++) {
+        for (int i = 1; i <= limit; i++) {
             if (!canWePlace(stalls, i, k)) {
                 return i - 1;
             }
