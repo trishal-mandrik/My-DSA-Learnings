@@ -6,7 +6,7 @@ import java.util.List;
 public class KthSmallestElement {
     List<Integer> elm = new ArrayList<>();
 
-    void inorder(TreeNode root) {
+    void inorder(Node root) {
         if (root == null)
             return;
         inorder(root.left);
@@ -14,7 +14,7 @@ public class KthSmallestElement {
         inorder(root.right);
     }
 
-    public int kthSmallest(TreeNode root, int k) {
+    public int kthSmallest(Node root, int k) {
         inorder(root);
         return elm.get(k - 1);
     }

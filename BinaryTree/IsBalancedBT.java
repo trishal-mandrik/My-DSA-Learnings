@@ -15,3 +15,6 @@ public class IsBalancedBT {
         return Math.max(leftHeight, rightHeight) + 1;
     }
 }
+
+// TC: O(N) where N is the number of nodes in the binary tree
+// SC: O(N), in worst case

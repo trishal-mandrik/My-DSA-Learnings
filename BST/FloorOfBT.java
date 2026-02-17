@@ -1,7 +1,7 @@
 package BST;
 
 public class FloorOfBT {
-    public static int floorInBST(TreeNode node, int x) {
+    public static int floorInBST(Node node, int x) {
         int floor = -1;
 
         while (node != null) {

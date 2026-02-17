@@ -1,7 +1,7 @@
 package BST;
 
 public class LCAInBST {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public Node lowestCommonAncestor(Node root, Node p, Node q) {
         if (root == null) return null;
         int curr = root.val;
 

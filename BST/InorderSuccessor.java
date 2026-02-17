@@ -1,8 +1,8 @@
 package BST;
 
 public class InorderSuccessor {
-    TreeNode inOrderSuccessor(TreeNode root, TreeNode p) {
-        TreeNode successor = null;
+    Node inOrderSuccessor(Node root, Node p) {
+        Node successor = null;
 
         while (root != null) {
             if (p.val >= root.val) {

@@ -1,11 +1,11 @@
 package FlattenABinaryTreeToLinkedList;
 
-import BST.TreeNode;
+import BST.Node;
 
 public class ApproachOne {
-    TreeNode prev = null;
+    Node prev = null;
 
-    public void flatten(TreeNode node) {
+    public void flatten(Node node) {
         if (node == null) return;
 
         flatten(node.right);

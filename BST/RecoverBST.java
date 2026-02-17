@@ -1,12 +1,12 @@
 package BST;
 
 public class RecoverBST {
-    private TreeNode first;
-    private TreeNode prev;
-    private TreeNode middle;
-    private TreeNode last;
+    private Node first;
+    private Node prev;
+    private Node middle;
+    private Node last;
 
-    private void inorder(TreeNode root) {
+    private void inorder(Node root) {
         if (root == null) return;
 
         inorder(root.left);
@@ -26,9 +26,9 @@ public class RecoverBST {
         inorder(root.right);
     }
 
-    public void recoverBST(TreeNode root) {
+    public void recoverBST(Node root) {
         first = middle = last = null;
-        prev = new TreeNode(Integer.MIN_VALUE);
+        prev = new Node(Integer.MIN_VALUE);
         inorder(root);
 
         if (first != null && last != null) {

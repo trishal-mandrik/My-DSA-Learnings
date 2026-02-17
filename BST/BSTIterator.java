@@ -3,9 +3,9 @@ package BST;
 import java.util.Stack;
 
 public class BSTIterator {
-    private Stack<TreeNode> stack = new Stack<>();
+    private Stack<Node> stack = new Stack<>();
 
-    public BSTIterator(TreeNode root) {
+    public BSTIterator(Node root) {
         pushAll(root);
     }
 
@@ -16,12 +16,12 @@ public class BSTIterator {
 
     // return the next smallest number
     public int next() {
-        TreeNode tmpNode = stack.pop();
+        Node tmpNode = stack.pop();
         pushAll(tmpNode.right);
         return tmpNode.val;
     }
 
-    private void pushAll(TreeNode node) {
+    private void pushAll(Node node) {
         while (node != null) {
             stack.push(node);
             node = node.left;

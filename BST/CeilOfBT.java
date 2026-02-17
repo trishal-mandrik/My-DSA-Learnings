@@ -1,7 +1,7 @@
 package BST;
 
 public class CeilOfBT {
-    public static int findCeil(TreeNode node, int x) {
+    public static int findCeil(Node node, int x) {
         int ceil = -1;
 
         while (node != null) {
