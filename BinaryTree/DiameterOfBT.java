@@ -1,17 +1,21 @@
 public class DiameterOfBT {
     public int findDiameter(TreeNode root) {
         int[] diameter = new int[1];
-        height(root, diameter);
+        heightAndDiameter(root, diameter);
         return diameter[0];
     }
 
-    private int height(TreeNode root, int[] diameter) {
+    private int heightAndDiameter(TreeNode root, int[] diameter) {
         if (root == null) return 0;
 
-        int lh = height(root.left, diameter);
-        int rh = height(root.right, diameter);
+        int lh = heightAndDiameter(root.left, diameter);
+        int rh = heightAndDiameter(root.right, diameter);
 
         diameter[0] = Math.max((lh + rh), diameter[0]);
         return 1 + Math.max(lh, rh);
     }
 }
+
+
+// TC: O(N) where N is the number of nodes in the binary tree
+// SC: O(N), in worst case
