@@ -21,3 +21,6 @@ public class MaxPathSumOfBT {
         return Math.max(left, right) + node.val;
     }
 }
+
+// TC: O(N) where N is the number of nodes in the binary tree
+// SC: O(H), auxiliary stack space, where H is height of Binary Tree
