@@ -12,8 +12,9 @@ class Tuple {
     }
 }
 
-public class VerticalOrderTravesalOfBT {
+public class VerticalOrderTraversalOfBT {
     public static List<List<Integer>> findVertical(TreeNode root) {
+        // vertical -> level -> nodes
         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();
 
         Queue<Tuple> q = new LinkedList<>();
@@ -43,8 +44,17 @@ public class VerticalOrderTravesalOfBT {
             if (node.right != null) {
                 q.offer(new Tuple(node.right, vertical + 1, level + 1));
             }
-        } // while loop ends
+        }
 
-
+        List<List<Integer>> list = new ArrayList<>();
+        for (TreeMap<Integer, PriorityQueue<Integer>> vertical: map.values()) {
+            list.add(new ArrayList<>());
+            for (PriorityQueue<Integer> nodes: vertical.values()) {
+                while (!nodes.isEmpty()) {
+                    list.getLast().add(nodes.poll());
+                }
+            }
+        }
+        return list;
     }
 }
