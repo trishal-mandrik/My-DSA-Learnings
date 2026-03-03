@@ -1,3 +1,5 @@
+import NodeDefinition.Node;
+
 import java.util.*;
 
 class Pair {
