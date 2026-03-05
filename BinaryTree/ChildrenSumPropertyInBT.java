@@ -1,3 +1,5 @@
+import NodeDefinition.Node;
+
 public class ChildrenSumPropertyInBT {
     public static void childSumProperty(Node root) {
         if (root == null) return;
@@ -26,4 +28,5 @@ public class ChildrenSumPropertyInBT {
     }
 }
 
-//TC: O(N) SC: O(1)
+// TC: O(N)
+// SC: O(H) -> worst case O(N) when the tree is skewed, best case O(logN) when the tree is balanced. This is the space used by the recursion stack.
