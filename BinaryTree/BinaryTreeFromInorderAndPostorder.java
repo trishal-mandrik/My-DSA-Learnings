@@ -40,3 +40,7 @@ public class BinaryTreeFromInorderAndPostorder {
         return root;
     }
 }
+
+
+// TC: O(n)
+// SC: O(n)
