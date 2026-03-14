@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Queue;
 
 public class SerializeAndDeserialize {
@@ -14,7 +15,8 @@ public class SerializeAndDeserialize {
                 res.append("n ");
                 continue;
             }
-            res.append(node.val + " ");
+//            res.append(node.val + " ");
+            res.append(node.val).append(" ");
             q.add(node.left);
             q.add(node.right);
         }
@@ -22,7 +24,7 @@ public class SerializeAndDeserialize {
     }
 
     TreeNode deserialize(String data) {
-        if (data == "") return null;
+        if (Objects.equals(data, "")) return null;
         Queue<TreeNode> q = new LinkedList<>();
         String[] values = data.split(" ");
         TreeNode root = new TreeNode(Integer.parseInt(values[0]));
@@ -43,3 +45,6 @@ public class SerializeAndDeserialize {
         return root;
     }
 }
+
+// TC: O(n) for both serialize and deserialize
+// SC: O(n) for both serialize and deserialize
