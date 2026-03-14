@@ -3,6 +3,14 @@ package KokoEatingBananas;
 import java.util.Arrays;
 
 public class Brute {
+    static int calculateHours(int[] arr, int bananasPerHour) {
+        int totalH = 0;
+        for (int j : arr) {
+            totalH += (int) Math.ceil((double) j / (double) bananasPerHour);
+        }
+        return totalH;
+    }
+
     public int kokoEat(int[] arr, int k) {
         // code here
         int max = Arrays.stream(arr).max().isPresent() ? Arrays.stream(arr).max().getAsInt() : 0;
@@ -14,14 +22,6 @@ public class Brute {
             }
         }
         return max;
-    }
-
-    static int calculateHours(int[] arr, int bananasPerHour) {
-        int totalH = 0;
-        for (int j : arr) {
-            totalH += (int) Math.ceil((double) j / (double) bananasPerHour);
-        }
-        return totalH;
     }
 }
 

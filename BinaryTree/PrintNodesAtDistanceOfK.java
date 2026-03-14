@@ -4,7 +4,7 @@ public class PrintNodesAtDistanceOfK {
     private void markParents(TreeNode root, HashMap<TreeNode, TreeNode> parent) {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode current = queue.poll();
             if (current.left != null) {
                 parent.put(current.left, current);
@@ -39,7 +39,7 @@ public class PrintNodesAtDistanceOfK {
                     visited.add(current_node.right);
                     queue.offer(current_node.right);
                 }
-                if (parent.containsKey(current_node) && !visited.contains(parent.get(current_node))){
+                if (parent.containsKey(current_node) && !visited.contains(parent.get(current_node))) {
                     visited.add(parent.get(current_node));
                     queue.offer(parent.get(current_node));
                 }

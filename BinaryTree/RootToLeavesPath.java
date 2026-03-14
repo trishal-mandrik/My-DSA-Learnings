@@ -11,21 +11,21 @@ public class RootToLeavesPath {
         return rootToLeafPath;
     }
 
-    static void getAllPaths(Node root, ArrayList<Integer> singlePath, ArrayList<ArrayList<Integer>> rootToLeafPath){
-        if(root == null) {
+    static void getAllPaths(Node root, ArrayList<Integer> singlePath, ArrayList<ArrayList<Integer>> rootToLeafPath) {
+        if (root == null) {
             rootToLeafPath.add(new ArrayList<>(singlePath));
             return;
         }
 
-        if(root.left == null && root.right == null) {
+        if (root.left == null && root.right == null) {
             singlePath.add(root.data);
             rootToLeafPath.add(new ArrayList<>(singlePath));
             singlePath.removeLast();
             return;
         }
         singlePath.add(root.data);
-        if(root.left != null) getAllPaths(root.left, singlePath, rootToLeafPath);
-        if(root.right != null) getAllPaths(root.right, singlePath, rootToLeafPath);
+        if (root.left != null) getAllPaths(root.left, singlePath, rootToLeafPath);
+        if (root.right != null) getAllPaths(root.right, singlePath, rootToLeafPath);
         singlePath.removeLast();
     }
 }

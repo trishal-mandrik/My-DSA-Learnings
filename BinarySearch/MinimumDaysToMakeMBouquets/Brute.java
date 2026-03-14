@@ -1,6 +1,22 @@
 package MinimumDaysToMakeMBouquets;
 
 public class Brute {
+    static boolean isPossible(int[] arr, int days, int k, int m) {
+        int cnt = 0;
+        int totalB = 0;
+
+        for (int i : arr) {
+            if (i <= days) {
+                cnt++;
+            } else {
+                totalB += cnt / k;
+                cnt = 0;
+            }
+        }
+        totalB += cnt / k;
+        return totalB >= m;
+    }
+
     public int minDaysBloom(int[] arr, int k, int m) {
         // code here
         long minFlowers = (long) k * m;
@@ -20,22 +36,6 @@ public class Brute {
             }
         }
         return -1;
-    }
-
-    static boolean isPossible(int[] arr, int days, int k, int m) {
-        int cnt = 0;
-        int totalB = 0;
-
-        for (int i : arr) {
-            if (i <= days) {
-                cnt++;
-            } else {
-                totalB += cnt / k;
-                cnt = 0;
-            }
-        }
-        totalB += cnt / k;
-        return totalB >= m;
     }
 }
 

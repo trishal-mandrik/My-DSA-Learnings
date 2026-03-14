@@ -47,9 +47,9 @@ public class VerticalOrderTraversalOfBT {
         }
 
         List<List<Integer>> list = new ArrayList<>();
-        for (TreeMap<Integer, PriorityQueue<Integer>> vertical: map.values()) {
+        for (TreeMap<Integer, PriorityQueue<Integer>> vertical : map.values()) {
             list.add(new ArrayList<>());
-            for (PriorityQueue<Integer> nodes: vertical.values()) {
+            for (PriorityQueue<Integer> nodes : vertical.values()) {
                 while (!nodes.isEmpty()) {
                     list.getLast().add(nodes.poll());
                 }

@@ -18,7 +18,7 @@ public class Brute {
     static int findDaysNeeded(int[] arr, int cap) {
         int days = 1, load = 0;
 
-        for(int weight: arr) {
+        for (int weight : arr) {
             if (load + weight > cap) {
                 days++;
                 load = weight;

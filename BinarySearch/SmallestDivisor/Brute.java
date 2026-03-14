@@ -3,6 +3,15 @@ package SmallestDivisor;
 import java.util.Arrays;
 
 public class Brute {
+    static boolean isPossible(int[] arr, int divisor, int k) {
+        int sum = 0;
+
+        for (int i : arr) {
+            sum += (int) Math.ceil((double) i / (double) divisor);
+        }
+        return sum <= k;
+    }
+
     int smallestDivisor(int[] arr, int k) {
         // Code here
         int maxi = Arrays.stream(arr).max().isPresent() ? Arrays.stream(arr).max().getAsInt() : 0;
@@ -11,15 +20,6 @@ public class Brute {
             if (isPossible(arr, d, k)) return d;
         }
         return -1;
-    }
-
-    static boolean isPossible(int[] arr, int divisor, int k) {
-        int sum = 0;
-
-        for (int i : arr) {
-            sum += (int) Math.ceil((double) i / (double) divisor);
-        }
-        return sum <= k;
     }
 }
 

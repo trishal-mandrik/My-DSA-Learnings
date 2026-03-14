@@ -4,8 +4,8 @@ public class Optimal {
     public int getSecondLargest(int[] arr) {
         int largest = arr[0], secondLargest = -1;
 
-        for(int i: arr) {
-            if(i > largest) {
+        for (int i : arr) {
+            if (i > largest) {
                 secondLargest = largest;
                 largest = i;
             } else if (arr[i] < largest && arr[i] > secondLargest) {
