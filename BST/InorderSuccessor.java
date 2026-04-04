@@ -5,7 +5,7 @@ public class InorderSuccessor {
         Node successor = null;
 
         while (root != null) {
-            if (p.val >= root.val) {
+            if (p.data >= root.data) {
                 root = root.right;
             } else {
                 successor = root;

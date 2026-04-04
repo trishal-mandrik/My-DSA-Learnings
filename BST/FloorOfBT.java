@@ -5,13 +5,13 @@ public class FloorOfBT {
         int floor = -1;
 
         while (node != null) {
-            if (node.val == x) {
-                floor = node.val;
+            if (node.data == x) {
+                floor = node.data;
                 return floor;
             }
 
-            if (x > node.val) {
-                floor = node.val;
+            if (x > node.data) {
+                floor = node.data;
                 node = node.right;
             } else {
                 node = node.left;

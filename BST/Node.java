@@ -3,17 +3,17 @@ package BST;
 public class Node {
     public Node left;
     public Node right;
-    public int val;
+    public int data;
 
     Node() {
     }
 
-    Node(int val) {
-        this.val = val;
+    Node(int data) {
+        this.data = data;
     }
 
-    Node(int val, Node left, Node right) {
-        this.val = val;
+    Node(int data, Node left, Node right) {
+        this.data = data;
         this.left = left;
         this.right = right;
     }

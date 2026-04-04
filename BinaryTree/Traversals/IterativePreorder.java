@@ -16,7 +16,7 @@ public class IterativePreorder {
 
         while (!st.isEmpty()) {
             Node currentNode = st.pop();
-            preorder.add(currentNode.val);
+            preorder.add(currentNode.data);
             if (currentNode.right != null) st.push(currentNode.right);
             if (currentNode.left != null) st.push(currentNode.left);
         }

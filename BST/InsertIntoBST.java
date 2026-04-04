@@ -7,7 +7,7 @@ public class InsertIntoBST {
         }
         Node cur = root;
         while (true) {
-            if (cur.val <= val) {
+            if (cur.data <= val) {
                 if (cur.right != null) cur = cur.right;
                 else {
                     cur.right = new Node(val);

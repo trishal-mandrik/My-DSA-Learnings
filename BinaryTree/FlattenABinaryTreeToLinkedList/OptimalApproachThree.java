@@ -7,7 +7,7 @@ public class OptimalApproachThree {
         if (root == null) return;
 
         Node curr = root;
-        Node prev = null;
+        Node prev;
 
         while (curr != null) {
             if(curr.left != null) {

@@ -5,14 +5,14 @@ public class CeilOfBT {
         int ceil = -1;
 
         while (node != null) {
-            if (node.val == x) {
-                ceil = node.val;
+            if (node.data == x) {
+                ceil = node.data;
                 return ceil;
             }
 
-            if (x > node.val) node = node.right;
+            if (x > node.data) node = node.right;
             else {
-                ceil = node.val;
+                ceil = node.data;
                 node = node.left;
             }
         }

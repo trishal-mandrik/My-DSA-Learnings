@@ -11,7 +11,7 @@ public class RecoverBST {
 
         inorder(root.left);
 
-        if (prev != null && (root.val < prev.val)) {
+        if (prev != null && (root.data < prev.data)) {
             // If this is first violation, mark these two nodes as 'first' and 'middle'
             if (first == null) {
                 first = prev;
@@ -32,13 +32,13 @@ public class RecoverBST {
         inorder(root);
 
         if (first != null && last != null) {
-            int t = first.val;
-            first.val = last.val;
-            last.val = t;
+            int t = first.data;
+            first.data = last.data;
+            last.data = t;
         } else if (first != null && middle != null) {
-            int t = first.val;
-            first.val = middle.val;
-            middle.val = t;
+            int t = first.data;
+            first.data = middle.data;
+            middle.data = t;
         }
     }
 }

@@ -1,4 +1,6 @@
-package BST;
+package BST.KthSmallestElement;
+
+import BST.Node;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,7 @@ public class KthSmallestElement {
         if (root == null)
             return;
         inorder(root.left);
-        elm.add(root.val);
+        elm.add(root.data);
         inorder(root.right);
     }
 

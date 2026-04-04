@@ -18,7 +18,7 @@ public class BSTIterator {
     public int next() {
         Node tmpNode = stack.pop();
         pushAll(tmpNode.right);
-        return tmpNode.val;
+        return tmpNode.data;
     }
 
     private void pushAll(Node node) {
