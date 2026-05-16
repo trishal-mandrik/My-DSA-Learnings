@@ -3,7 +3,7 @@ package BST;
 import java.util.Stack;
 
 public class BSTIterator {
-    private Stack<Node> stack = new Stack<>();
+    private final Stack<Node> stack = new Stack<>();
 
     public BSTIterator(Node root) {
         pushAll(root);
