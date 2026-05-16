@@ -50,9 +50,9 @@ Sunday (4 hrs):      2 hrs Revision (old topic) + 2 hrs LeetCode Contest/Mock
 | 9 | Postfix to Infix | Medium | GFG |  |  |  |  |
 
 ### Day 3 - Wed, May 7 - Monotonic Stack
-| # | Problem | Difficulty | Platform |
-|---|---------|-----------|----------|
-| 10 | Next Greater Element I | Easy | LeetCode 496 |
+| # | Problem | Difficulty | Platform | Status | Date Solved | Revision 1 | Revision 2 | Revision 3 |
+|---|---------|-----------|----------|--------|-------------|------------|------------|------------|
+| 10 | Next Greater Element I | Easy | LeetCode 496 | ✅ Done | 16-05-2026 | 🕓 pending (17-05-2026) | 🕓 pending (23-05-2026) | 🕓 pending (06-06-2026) |
 | 11 | Next Greater Element II (circular) | Medium | LeetCode 503 |
 | 12 | Next Smaller Element | Easy | GFG |
 | 13 | Number of NGEs to the right | Medium | GFG |
