@@ -44,7 +44,7 @@ Sunday (4 hrs):      2 hrs Revision (old topic) + 2 hrs LeetCode Contest/Mock
 ### Day 2 - Tue, May 6 - Stack Medium
 | # | Problem | Difficulty | Platform | Status | Date Solved | Revision 1 | Revision 2 | Revision 3 |
 |---|---------|-----------|----------|--------|-------------|------------|------------|------------|
-| 6 | Min Stack | Medium | LeetCode 155 | ✅ Done | 16-05-2026 | 🕓 pending (17-05-2026) | 🕓 pending (23-05-2026) | 🕓 pending (06-06-2026) |
+| 6 | Min Stack | Medium | LeetCode 155 | ✅ Done | 16-05-2026 | ✅ done (17-05-2026) | 🕓 pending (23-05-2026) | 🕓 pending (06-06-2026) |
 | 7 | Infix to Postfix | Medium | GFG |  |  |  |  |
 | 8 | Prefix to Infix | Medium | GFG |  |  |  |  |
 | 9 | Postfix to Infix | Medium | GFG |  |  |  |  |
@@ -52,9 +52,9 @@ Sunday (4 hrs):      2 hrs Revision (old topic) + 2 hrs LeetCode Contest/Mock
 ### Day 3 - Wed, May 7 - Monotonic Stack
 | # | Problem | Difficulty | Platform | Status | Date Solved | Revision 1 | Revision 2 | Revision 3 |
 |---|---------|-----------|----------|--------|-------------|------------|------------|------------|
-| 10 | Next Greater Element I | Easy | LeetCode 496 | ✅ Done | 16-05-2026 | 🕓 pending (17-05-2026) | 🕓 pending (23-05-2026) | 🕓 pending (06-06-2026) |
-| 11 | Next Greater Element II (circular) | Medium | LeetCode 503 |
-| 12 | Next Smaller Element | Easy | GFG |
+| 10 | Next Greater Element I | Easy | LeetCode 496 | ✅ Done | 16-05-2026 | ✅ done (17-05-2026) | 🕓 pending (23-05-2026) | 🕓 pending (06-06-2026) |
+| 11 | Next Greater Element II (circular) | Medium | LeetCode 503 | ✅ Done | 18-05-2026 | 🕓 pending (19-05-2026) | 🕓 pending (25-05-2026) | 🕓 pending (08-06-2026) |
+| 12 | Next Smaller Element | Easy | GFG | ✅ Done | 18-05-2026 | 🕓 pending (19-05-2026) | 🕓 pending (25-05-2026) | 🕓 pending (08-06-2026) |
 | 13 | Number of NGEs to the right | Medium | GFG |
 
 ### Day 4 - Thu, May 8 - Stack Medium/Hard
