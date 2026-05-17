@@ -17,7 +17,7 @@ class SpecialStackOptimal {
             min = x;
             st.push(x);
         } else {
-            if (x > min) st.push(x);
+            if (x >= min) st.push(x);
             else {
                 st.push(2 * x - min);
                 min = x;
@@ -53,8 +53,7 @@ class SpecialStackOptimal {
     public int getMin() {
         // Finds minimum element of Stack
         if (!st.isEmpty()) {
-            int top = st.peek();
-            return Math.max(top, min);
+            return min;
         } else return -1;
     }
 }
