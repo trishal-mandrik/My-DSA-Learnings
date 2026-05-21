@@ -58,20 +58,20 @@ Sunday (4 hrs):      2 hrs Revision (old topic) + 2 hrs LeetCode Contest/Mock
 | 13 | Number of NGEs to the right | Medium | GFG |
 
 ### Day 4 - Thu, May 8 - Stack Medium/Hard
-| # | Problem | Difficulty | Platform |
-|---|---------|-----------|----------|
-| 14 | Trapping Rain Water | Hard | LeetCode 42 |
-| 15 | Sum of Subarray Minimums | Medium | LeetCode 907 |
-| 16 | Asteroid Collision | Medium | LeetCode 735 |
-| 17 | Sum of Subarray Ranges | Medium | LeetCode 2104 |
+| # | Problem | Difficulty | Platform | Status | Date Solved | Revision 1 | Revision 2 | Revision 3 |
+|---|---------|-----------|----------|--------|-------------|------------|------------|------------|
+| 14 | Trapping Rain Water | Hard | LeetCode 42 | ✅ Done | 21-05-2026 | 🕓 pending (22-05-2026) | 🕓 pending (29-05-2026) | 🕓 pending (12-06-2026) |
+| 15 | Sum of Subarray Minimums | Medium | LeetCode 907 |  |  |  |  |  |
+| 16 | Asteroid Collision | Medium | LeetCode 735 |  |  |  |  |  |
+| 17 | Sum of Subarray Ranges | Medium | LeetCode 2104 |  |  |  |  |  |
 
 ### Day 5 - Fri, May 9 - Stack Hard
-| # | Problem | Difficulty | Platform |
-|---|---------|-----------|----------|
-| 18 | Stock Span Problem | Medium | LeetCode 901 |
-| 19 | Largest Rectangle in Histogram | Hard | LeetCode 84 |
-| 20 | Maximal Rectangle | Hard | LeetCode 85 |
-| 21 | Remove K Digits | Medium | LeetCode 402 |
+| # | Problem | Difficulty | Platform | Status | Date Solved | Revision 1 | Revision 2 | Revision 3 |
+|---|---------|-----------|----------|--------|-------------|------------|------------|------------|
+| 18 | Stock Span Problem | Medium | LeetCode 901 |  |  |  |  |  |
+| 19 | Largest Rectangle in Histogram | Hard | LeetCode 84 |  |  |  |  |  |
+| 20 | Maximal Rectangle | Hard | LeetCode 85 |  |  |  |  |  |
+| 21 | Remove K Digits | Medium | LeetCode 402 |  |  |  |  |  |
 
 ### Day 6 - Sat, May 10 (Morning: REVISION Arrays | Afternoon: Stack remaining)
 | # | Problem | Type | Platform |
